@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Gestore_Grest:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar</output-path>
+    <root id="archive" name="Gestore_Grest.jar">
+      <element id="module-output" name="Gestore_Grest" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Librerie Java/mysql-connector-java-5.1.45-bin.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
