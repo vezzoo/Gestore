@@ -7,10 +7,7 @@ import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import javax.xml.bind.DatatypeConverter;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
+import java.awt.event.*;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -274,154 +271,24 @@ public class AddBambinoInterface {
         salvaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int giorno = -1;
-                int mese = -1;
-                int anno = -1;
-                int giornoSaldo = -1;
-                int meseSaldo = -1;
-                int annoSaldo = -1;
+                salva(id, interfaccia1, frame1, defaultBorder);
+            }
+        });
+        salvaButton.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                if (e.getKeyChar() == '\n')
+                    salva(id, interfaccia1, frame1, defaultBorder);
+            }
 
-                String magliette = null;
+            @Override
+            public void keyPressed(KeyEvent e) {
 
-                try {
-                    giorno = Integer.parseInt(giornoJTF.getText());
-                    giornoJTF.setBorder(defaultBorder);
-                } catch (Exception ex) {
-                    giornoJTF.setBorder(new LineBorder(Color.RED, 2));
-                    ex.printStackTrace();
-                }
+            }
 
-                try {
-                    mese = Integer.parseInt(meseJTF.getText());
-                    meseJTF.setBorder(defaultBorder);
-                } catch (Exception ex) {
-                    meseJTF.setBorder(new LineBorder(Color.RED, 2));
-                    ex.printStackTrace();
-                }
+            @Override
+            public void keyReleased(KeyEvent e) {
 
-                try {
-                    anno = Integer.parseInt(annoJTF.getText());
-                    annoJTF.setBorder(defaultBorder);
-                } catch (Exception ex) {
-                    annoJTF.setBorder(new LineBorder(Color.RED, 2));
-                    ex.printStackTrace();
-                }
-
-                if (giornoSaldoJTF.isEnabled()) {
-                    try {
-                        giornoSaldo = Integer.parseInt(giornoSaldoJTF.getText());
-                        giornoSaldoJTF.setBorder(defaultBorder);
-                    } catch (Exception ex) {
-                        giornoSaldoJTF.setBorder(new LineBorder(Color.RED, 2));
-                        ex.printStackTrace();
-                    }
-
-                    try {
-                        meseSaldo = Integer.parseInt(meseSaldoJTF.getText());
-                        meseSaldoJTF.setBorder(defaultBorder);
-                    } catch (Exception ex) {
-                        meseSaldoJTF.setBorder(new LineBorder(Color.RED, 2));
-                        ex.printStackTrace();
-                    }
-
-                    try {
-                        annoSaldo = Integer.parseInt(annoSaldoJTF.getText());
-                        annoSaldoJTF.setBorder(defaultBorder);
-                    } catch (Exception ex) {
-                        annoSaldoJTF.setBorder(new LineBorder(Color.RED, 2));
-                        ex.printStackTrace();
-                    }
-                }
-
-                if (!maglietteJTF.getText().equals("")) {
-                    try {
-                        int variabileInutile = Integer.parseInt(maglietteJTF.getText());
-
-                        if (variabileInutile < 0)
-                            throw new Exception("Wrong value storia");
-
-                        maglietteJTF.setBorder(defaultBorder);
-                        magliette = maglietteJTF.getText();
-                    } catch (Exception ex) {
-                        maglietteJTF.setBorder(new LineBorder(Color.RED, 2));
-                        ex.printStackTrace();
-                    }
-                } else {
-                    maglietteJTF.setBorder(defaultBorder);
-                    magliette = "";
-                }
-
-                Bambino bambino = null;
-
-                if (giorno != -1 && mese != -1 && anno != -1
-                        && giornoSaldo != -1 && meseSaldo != -1
-                        && annoSaldo != -1 && magliette != null) {
-
-                    bambino = new Bambino(cognomeJTF.getText(), nomeJTF.getText(),
-                            new DataPersonalizzata(giorno, mese, anno), classeJTF.getText(),
-                            indirizzoJTF.getText(), telefono1JTF.getText(), telefono2JTF.getText(),
-                            preferenzaJTF.getText(), getSelectedButtonText(grestGroup),
-                            getSelectedButtonText(settimaneGroup), getSelectedButtonText(tagliaGroup),
-                            getSelectedButtonText(psGroup), magliette,
-                            getSelectedButtonText(pagamentoGroup),
-                            new DataPersonalizzata(giornoSaldo, meseSaldo, annoSaldo),
-                            getSelectedButtonText(eaGroup), getSelectedButtonText(pranzoGroup), "");
-                } else if (giorno != -1 && mese != -1 && anno != -1
-                        && !giornoSaldoJTF.isEnabled() && magliette != null) {
-                    bambino = new Bambino(cognomeJTF.getText(), nomeJTF.getText(),
-                            new DataPersonalizzata(giorno, mese, anno), classeJTF.getText(),
-                            indirizzoJTF.getText(), telefono1JTF.getText(), telefono2JTF.getText(),
-                            preferenzaJTF.getText(), getSelectedButtonText(grestGroup),
-                            getSelectedButtonText(settimaneGroup), getSelectedButtonText(tagliaGroup),
-                            getSelectedButtonText(psGroup), magliette,
-                            getSelectedButtonText(pagamentoGroup),
-                            getSelectedButtonText(eaGroup), getSelectedButtonText(pranzoGroup), "");
-                }
-
-                if (bambino != null) {
-                    try {
-                        Connection connection = DriverManager.getConnection(
-                                "jdbc:mysql://"
-                                        + interfaccia1.getDbConnection().getDbHost() + "/"
-                                        + interfaccia1.getDbConnection().getDbName()
-                                        + "?user="
-                                        + interfaccia1.getDbConnection().getDbUser() + "&password="
-                                        + interfaccia1.getDbConnection().getDbPassword());
-
-                        if (id != -1) {
-                            PreparedStatement preparedstatement =
-                                    connection.prepareStatement("DELETE FROM Bambini_" +
-                                            interfaccia1.getDbConnection().getDbTable() +
-                                            " WHERE ID='" + id + "';");
-
-                            preparedstatement.execute();
-                        }
-
-                        PreparedStatement preparedstatement =
-                                connection.prepareStatement("INSERT INTO Bambini_"
-                                        + interfaccia1.getDbConnection().getDbTable() +
-                                        " (cognomenome, bambino)" +
-                                        " values (?,?)");
-
-                        preparedstatement.setString(1,
-                                bambino.getCognome() + " " + bambino.getNome()
-                                        + " " + bambino.getAnno());
-                        preparedstatement.setString(2, AddBambinoInterface.toString(bambino));
-                        preparedstatement.execute();
-
-                        interfaccia1.getFrame().dispose();
-                        frame1.dispose();
-
-                        SwingUtilities.invokeLater(new Runnable() {
-                            @Override
-                            public void run() {
-                                StartProgramInterface.createAndShowGUI();
-                            }
-                        });
-                    } catch (Exception ex) {
-                        ex.printStackTrace();
-                    }
-                }
             }
         });
 
@@ -436,6 +303,157 @@ public class AddBambinoInterface {
                 annoSaldoJTF.setBorder(defaultBorder);
             }
         });
+    }
+
+    private void salva(int id, Interface interfaccia1, JFrame frame1, Border defaultBorder) {
+        int giorno = -1;
+        int mese = -1;
+        int anno = -1;
+        int giornoSaldo = -1;
+        int meseSaldo = -1;
+        int annoSaldo = -1;
+
+        String magliette = null;
+
+        try {
+            giorno = Integer.parseInt(giornoJTF.getText());
+            giornoJTF.setBorder(defaultBorder);
+        } catch (Exception ex) {
+            giornoJTF.setBorder(new LineBorder(Color.RED, 2));
+            ex.printStackTrace();
+        }
+
+        try {
+            mese = Integer.parseInt(meseJTF.getText());
+            meseJTF.setBorder(defaultBorder);
+        } catch (Exception ex) {
+            meseJTF.setBorder(new LineBorder(Color.RED, 2));
+            ex.printStackTrace();
+        }
+
+        try {
+            anno = Integer.parseInt(annoJTF.getText());
+            annoJTF.setBorder(defaultBorder);
+        } catch (Exception ex) {
+            annoJTF.setBorder(new LineBorder(Color.RED, 2));
+            ex.printStackTrace();
+        }
+
+        if (giornoSaldoJTF.isEnabled()) {
+            try {
+                giornoSaldo = Integer.parseInt(giornoSaldoJTF.getText());
+                giornoSaldoJTF.setBorder(defaultBorder);
+            } catch (Exception ex) {
+                giornoSaldoJTF.setBorder(new LineBorder(Color.RED, 2));
+                ex.printStackTrace();
+            }
+
+            try {
+                meseSaldo = Integer.parseInt(meseSaldoJTF.getText());
+                meseSaldoJTF.setBorder(defaultBorder);
+            } catch (Exception ex) {
+                meseSaldoJTF.setBorder(new LineBorder(Color.RED, 2));
+                ex.printStackTrace();
+            }
+
+            try {
+                annoSaldo = Integer.parseInt(annoSaldoJTF.getText());
+                annoSaldoJTF.setBorder(defaultBorder);
+            } catch (Exception ex) {
+                annoSaldoJTF.setBorder(new LineBorder(Color.RED, 2));
+                ex.printStackTrace();
+            }
+        }
+
+        if (!maglietteJTF.getText().equals("")) {
+            try {
+                int variabileInutile = Integer.parseInt(maglietteJTF.getText());
+
+                if (variabileInutile < 0)
+                    throw new Exception("Wrong value storia");
+
+                maglietteJTF.setBorder(defaultBorder);
+                magliette = maglietteJTF.getText();
+            } catch (Exception ex) {
+                maglietteJTF.setBorder(new LineBorder(Color.RED, 2));
+                ex.printStackTrace();
+            }
+        } else {
+            maglietteJTF.setBorder(defaultBorder);
+            magliette = "";
+        }
+
+        Bambino bambino = null;
+
+        if (giorno != -1 && mese != -1 && anno != -1
+                && giornoSaldo != -1 && meseSaldo != -1
+                && annoSaldo != -1 && magliette != null) {
+
+            bambino = new Bambino(cognomeJTF.getText(), nomeJTF.getText(),
+                    new DataPersonalizzata(giorno, mese, anno), classeJTF.getText(),
+                    indirizzoJTF.getText(), telefono1JTF.getText(), telefono2JTF.getText(),
+                    preferenzaJTF.getText(), getSelectedButtonText(grestGroup),
+                    getSelectedButtonText(settimaneGroup), getSelectedButtonText(tagliaGroup),
+                    getSelectedButtonText(psGroup), magliette,
+                    getSelectedButtonText(pagamentoGroup),
+                    new DataPersonalizzata(giornoSaldo, meseSaldo, annoSaldo),
+                    getSelectedButtonText(eaGroup), getSelectedButtonText(pranzoGroup), "");
+        } else if (giorno != -1 && mese != -1 && anno != -1
+                && !giornoSaldoJTF.isEnabled() && magliette != null) {
+            bambino = new Bambino(cognomeJTF.getText(), nomeJTF.getText(),
+                    new DataPersonalizzata(giorno, mese, anno), classeJTF.getText(),
+                    indirizzoJTF.getText(), telefono1JTF.getText(), telefono2JTF.getText(),
+                    preferenzaJTF.getText(), getSelectedButtonText(grestGroup),
+                    getSelectedButtonText(settimaneGroup), getSelectedButtonText(tagliaGroup),
+                    getSelectedButtonText(psGroup), magliette,
+                    getSelectedButtonText(pagamentoGroup),
+                    getSelectedButtonText(eaGroup), getSelectedButtonText(pranzoGroup), "");
+        }
+
+        if (bambino != null) {
+            try {
+                Connection connection = DriverManager.getConnection(
+                        "jdbc:mysql://"
+                                + interfaccia1.getDbConnection().getDbHost() + "/"
+                                + interfaccia1.getDbConnection().getDbName()
+                                + "?user="
+                                + interfaccia1.getDbConnection().getDbUser() + "&password="
+                                + interfaccia1.getDbConnection().getDbPassword());
+
+                if (id != -1) {
+                    PreparedStatement preparedstatement =
+                            connection.prepareStatement("DELETE FROM Bambini_" +
+                                    interfaccia1.getDbConnection().getDbTable() +
+                                    " WHERE ID='" + id + "';");
+
+                    preparedstatement.execute();
+                }
+
+                PreparedStatement preparedstatement =
+                        connection.prepareStatement("INSERT INTO Bambini_"
+                                + interfaccia1.getDbConnection().getDbTable() +
+                                " (cognomenome, bambino)" +
+                                " values (?,?)");
+
+                preparedstatement.setString(1,
+                        bambino.getCognome() + " " + bambino.getNome()
+                                + " " + bambino.getAnno());
+                preparedstatement.setString(2, AddBambinoInterface.toString(bambino));
+                preparedstatement.execute();
+
+                interfaccia1.getFrame().dispose();
+                frame1.dispose();
+
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        StartProgramInterface.createAndShowGUI();
+                    }
+                });
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
     }
 
     public String getSelectedButtonText(ButtonGroup buttonGroup) {

@@ -1,5 +1,6 @@
 package it.lucaVezzoli.Interface;
 
+import com.sun.rowset.internal.Row;
 import it.lucaVezzoli.Application.*;
 
 import javax.swing.*;
@@ -11,6 +12,7 @@ import javax.xml.bind.DatatypeConverter;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
+import java.nio.file.Path;
 import java.sql.*;
 import java.util.*;
 import java.util.List;
@@ -41,6 +43,9 @@ public class Interface extends JPanel {
     private JCheckBoxMenuItem showTaglia;
     private JMenuItem sincronizzaDB;
     private JMenu visualizzaAnni;
+    private JMenu esporta;
+    private JMenuItem toCSV;
+    private JMenuItem toXLS;
     private JTextField cercaAnimatori;
     private JTextField cercaBambini;
     private DBConnection dbConnection;
@@ -289,9 +294,48 @@ public class Interface extends JPanel {
             }
         });
 
+        esporta = new JMenu("Esporta in");
+
+        toCSV = new JMenuItem(".CSV");
+        toCSV.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    String estensione = "csv";
+                    String userHomeFolder = System.getProperty("user.home");
+                    userHomeFolder += File.separator + "Desktop" + File.separator + "File esportati dal database"
+                            + File.separator + estensione.toUpperCase();
+                    File animatori = new File(userHomeFolder, "animatori." + estensione);
+                    File bambini = new File(userHomeFolder, "bambini." + estensione);
+
+                    animatoriToCSV(animatori.toString());
+//                    bambiniToCSV(tableBambini, bambini.toString());
+
+                    JOptionPane.showMessageDialog(null, "Salvataggio riuscito!\nDirectory:\n" + userHomeFolder,
+                            "Completamento operazione", JOptionPane.INFORMATION_MESSAGE);
+                } catch (FileNotFoundException | UnsupportedEncodingException e1) {
+                    e1.printStackTrace();
+                    JOptionPane.showMessageDialog(null, "Impossibile esportare!",
+                            "Errore", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
+
+        toXLS = new JMenuItem(".XLS (consigliato)");
+        toXLS.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+
+        esporta.add(toCSV);
+        esporta.add(toXLS);
+
         impostazioni.add(connettivita);
         impostazioni.add(gestioneAccount);
         impostazioni.add(visualizzaAnni);
+        impostazioni.add(esporta);
         impostazioni.add(sincronizzaDB);
         menuBar.add(impostazioni);
 
@@ -928,6 +972,10 @@ public class Interface extends JPanel {
                         data[index][4] = "   " + bambino.getMaglietta();
                         data[index][5] = "   " + bambino.getTaglia();
                     }
+                    if (showPreferenze.isSelected() && !showMagliette.isSelected() && showTaglia.isSelected()) {
+                        data[index][4] = "   " + bambino.getPreferenza();
+                        data[index][5] = "   " + bambino.getTaglia();
+                    }
 
                     data[index][lenCol - 1] = "   (" + bambino.getId() + ")";
 
@@ -1262,6 +1310,35 @@ public class Interface extends JPanel {
         }
     }
 
+    private void animatoriToCSV(String fileName) throws FileNotFoundException, UnsupportedEncodingException {
+        PrintWriter writer = new PrintWriter(new File(fileName), "UTF-8");
+
+        writer.print("Id, Cognome, Nome, Anno, Adesione ABC, Incontri totali," +
+                "Grest, Minigrest, Campo ADO, Pit Stop, San Luigi preADO, San Luigi, Impegni," +
+                "Attività, Animazione, Giganti, Giochi, Festa finale, Preghiera, Scenografia," +
+                "Segreteria, Storia, Responsabile");
+        writer.print("\n\n");
+
+        for (Animatore animatore : animatori) {
+            String toWrite = animatore.getId() + "," + animatore.getCognome() + "," +
+                    animatore.getNome() + "," + animatore.getAnno() + "," + animatore.getAbc_incontri_partecipato() + "," +
+                    animatore.getAbc_incontri_totali() + ",";
+
+            for (AnimazioneEstiva animazioneEstiva : animatore.getAnimazioneEstiva())
+                toWrite += (animazioneEstiva.getPartecipazione().equals("Non specificato")
+                        ? "N/S" : animazioneEstiva.getPartecipazione()) + ",";
+
+            toWrite += animatore.getImpegni() + ",";
+
+            for (GruppiPreferenza gruppoPreferenza : animatore.getGruppiPreferenza())
+                toWrite += (gruppoPreferenza.getVoto().equals("") ? "N/S" : gruppoPreferenza.getVoto()) + ",";
+
+            toWrite += animatore.getResponsabile() == true ? "Si" : "No";
+
+            writer.println(toWrite);
+        }
+        writer.close();
+    }
 
     public void setFrame(JFrame frame) {
         this.frame = frame;

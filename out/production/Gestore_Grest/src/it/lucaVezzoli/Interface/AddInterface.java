@@ -9,6 +9,8 @@ import javax.xml.bind.DatatypeConverter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.io.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -277,276 +279,27 @@ public class AddInterface {
         salvaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                final Border defaultBorder = cognomeJTF.getBorder();
-                int anno = -1;
-                int incontri = -1;
-                int incontri_tot = Integer.parseInt(incontri_ABC_totali.getText());
-                String attivita = null;
-                String animazione = null;
-                String giganti = null;
-                String giochi = null;
-                String festaFinale = null;
-                String preghiera = null;
-                String scenografia = null;
-                String segreteria = null;
-                String storia = null;
-
-                try {
-                    anno = Integer.parseInt(annoJTF.getText());
-                    annoJTF.setBorder(defaultBorder);
-                } catch (Exception ex) {
-                    annoJTF.setBorder(new LineBorder(Color.RED, 2));
-                    ex.printStackTrace();
-                }
-
-                try {
-                    incontri = Integer.parseInt(incontri_ABC.getText());
-                    incontri_ABC.setBorder(defaultBorder);
-                } catch (Exception ex) {
-                    incontri_ABC.setBorder(new LineBorder(Color.RED, 2));
-                    ex.printStackTrace();
-                }
-
-                if (!attivitaJTF.getText().equals("")) {
-                    try {
-                        int variabileInutile = Integer.parseInt(attivitaJTF.getText());
-
-                        if (variabileInutile < 0 || variabileInutile > 10)
-                            throw new Exception("Wrong value attivita");
-
-                        attivitaJTF.setBorder(defaultBorder);
-                        attivita = attivitaJTF.getText();
-                    } catch (Exception ex) {
-                        attivitaJTF.setBorder(new LineBorder(Color.RED, 2));
-                        ex.printStackTrace();
-                    }
-                } else {
-                    attivitaJTF.setBorder(defaultBorder);
-                    attivita = "";
-                }
-
-                if (!animazioneJTF.getText().equals("")) {
-                    try {
-                        int variabileInutile = Integer.parseInt(animazioneJTF.getText());
-
-                        if (variabileInutile < 0 || variabileInutile > 10)
-                            throw new Exception("Wrong value animazione");
-
-                        animazioneJTF.setBorder(defaultBorder);
-                        animazione = animazioneJTF.getText();
-                    } catch (Exception ex) {
-                        animazioneJTF.setBorder(new LineBorder(Color.RED, 2));
-                        ex.printStackTrace();
-                    }
-                } else {
-                    animazioneJTF.setBorder(defaultBorder);
-                    animazione = "";
-                }
-
-                if (!gigantiJTF.getText().equals("")) {
-                    try {
-                        int variabileInutile = Integer.parseInt(gigantiJTF.getText());
-
-                        if (variabileInutile < 0 || variabileInutile > 10)
-                            throw new Exception("Wrong value giganti");
-
-                        gigantiJTF.setBorder(defaultBorder);
-                        giganti = gigantiJTF.getText();
-                    } catch (Exception ex) {
-                        gigantiJTF.setBorder(new LineBorder(Color.RED, 2));
-                        ex.printStackTrace();
-                    }
-                } else {
-                    gigantiJTF.setBorder(defaultBorder);
-                    giganti = "";
-                }
-
-                if (!giochiJTF.getText().equals("")) {
-                    try {
-                        int variabileInutile = Integer.parseInt(giochiJTF.getText());
-
-                        if (variabileInutile < 0 || variabileInutile > 10)
-                            throw new Exception("Wrong value giochi");
-
-                        giochiJTF.setBorder(defaultBorder);
-                        giochi = giochiJTF.getText();
-                    } catch (Exception ex) {
-                        giochiJTF.setBorder(new LineBorder(Color.RED, 2));
-                        ex.printStackTrace();
-                    }
-                } else {
-                    giochiJTF.setBorder(defaultBorder);
-                    giochi = "";
-                }
-
-                if (!festafinaleJTF.getText().equals("")) {
-                    try {
-                        int variabileInutile = Integer.parseInt(festafinaleJTF.getText());
-
-                        if (variabileInutile < 0 || variabileInutile > 10)
-                            throw new Exception("Wrong value festafinale");
-
-                        festafinaleJTF.setBorder(defaultBorder);
-                        festaFinale = festafinaleJTF.getText();
-                    } catch (Exception ex) {
-                        festafinaleJTF.setBorder(new LineBorder(Color.RED, 2));
-                        ex.printStackTrace();
-                    }
-                } else {
-                    festafinaleJTF.setBorder(defaultBorder);
-                    festaFinale = "";
-                }
-
-                if (!preghieraJTF.getText().equals("")) {
-                    try {
-                        int variabileInutile = Integer.parseInt(preghieraJTF.getText());
-
-                        if (variabileInutile < 0 || variabileInutile > 10)
-                            throw new Exception("Wrong value preghiera");
-
-                        preghieraJTF.setBorder(defaultBorder);
-                        preghiera = preghieraJTF.getText();
-                    } catch (Exception ex) {
-                        preghieraJTF.setBorder(new LineBorder(Color.RED, 2));
-                        ex.printStackTrace();
-                    }
-                } else {
-                    preghieraJTF.setBorder(defaultBorder);
-                    preghiera = "";
-                }
-
-                if (!scenografiaJTF.getText().equals("")) {
-                    try {
-                        int variabileInutile = Integer.parseInt(scenografiaJTF.getText());
-
-                        if (variabileInutile < 0 || variabileInutile > 10)
-                            throw new Exception("Wrong value scenografia");
-
-                        scenografiaJTF.setBorder(defaultBorder);
-                        scenografia = scenografiaJTF.getText();
-                    } catch (Exception ex) {
-                        scenografiaJTF.setBorder(new LineBorder(Color.RED, 2));
-                        ex.printStackTrace();
-                    }
-                } else {
-                    scenografiaJTF.setBorder(defaultBorder);
-                    scenografia = "";
-                }
-
-                if (!segreteriaJTF.getText().equals("")) {
-                    try {
-                        int variabileInutile = Integer.parseInt(segreteriaJTF.getText());
-
-                        if (variabileInutile < 0 || variabileInutile > 10)
-                            throw new Exception("Wrong value segreteria");
-
-                        segreteriaJTF.setBorder(defaultBorder);
-                        segreteria = segreteriaJTF.getText();
-                    } catch (Exception ex) {
-                        segreteriaJTF.setBorder(new LineBorder(Color.RED, 2));
-                        ex.printStackTrace();
-                    }
-                } else {
-                    segreteriaJTF.setBorder(defaultBorder);
-                    segreteria = "";
-                }
-
-                if (!storiaJTF.getText().equals("")) {
-                    try {
-                        int variabileInutile = Integer.parseInt(storiaJTF.getText());
-
-                        if (variabileInutile < 0 || variabileInutile > 10)
-                            throw new Exception("Wrong value storia");
-
-                        storiaJTF.setBorder(defaultBorder);
-                        storia = storiaJTF.getText();
-                    } catch (Exception ex) {
-                        storiaJTF.setBorder(new LineBorder(Color.RED, 2));
-                        ex.printStackTrace();
-                    }
-                } else {
-                    storiaJTF.setBorder(defaultBorder);
-                    storia = "";
-                }
-
-                animazioniEstive = new AnimazioneEstiva[6];
-
-                animazioniEstive[0] = new AnimazioneEstiva("Grest", getSelectedButtonText(grestGroup));
-                animazioniEstive[1] = new AnimazioneEstiva("MiniGrest", getSelectedButtonText(miniGrestGroup));
-                animazioniEstive[2] = new AnimazioneEstiva("CampoADO", getSelectedButtonText(caGroup));
-                animazioniEstive[3] = new AnimazioneEstiva("PitStop", getSelectedButtonText(psGroup));
-                animazioniEstive[4] = new AnimazioneEstiva("SanLuigiPreADO", getSelectedButtonText(slpaGroup));
-                animazioniEstive[5] = new AnimazioneEstiva("SanLuigi", getSelectedButtonText(slGroup));
-
-                boolean[] check = new boolean[9];
-                gruppiPreferenza = new GruppiPreferenza[9];
-
-                gruppiPreferenza[0] = new GruppiPreferenza("Attivita", attivita);
-                gruppiPreferenza[1] = new GruppiPreferenza("Animazione", animazione);
-                gruppiPreferenza[2] = new GruppiPreferenza("Giganti", giganti);
-                gruppiPreferenza[3] = new GruppiPreferenza("Giochi", giochi);
-                gruppiPreferenza[4] = new GruppiPreferenza("FestaFinale", festaFinale);
-                gruppiPreferenza[5] = new GruppiPreferenza("Preghiera", preghiera);
-                gruppiPreferenza[6] = new GruppiPreferenza("Scenografia", scenografia);
-                gruppiPreferenza[7] = new GruppiPreferenza("Segreteria", segreteria);
-                gruppiPreferenza[8] = new GruppiPreferenza("Storia", storia);
-
-                for (int i = 0; i < gruppiPreferenza.length; i++) {
-                    if (gruppiPreferenza[i].getVoto().equals(""))
-                        check[i] = true;
-                }
-
-                if (anno != -1 && incontri != -1 && incontri_tot != -1) {
-                    Animatore animatore =
-                            new Animatore(cognomeJTF.getText(), nomeJTF.getText(),
-                                    anno, incontri, incontri_tot, animazioniEstive,
-                                    impegniJTF.getText(),
-                                    gruppiPreferenza,
-                                    AddInterface.checkArray(check));
-
-                    try {
-                        Connection connection = DriverManager.getConnection(
-                                "jdbc:mysql://" + interfaccia1.getDbConnection().getDbHost() + "/"
-                                        + interfaccia1.getDbConnection().getDbName()
-                                        + "?user="
-                                        + interfaccia1.getDbConnection().getDbUser() + "&password="
-                                        + interfaccia1.getDbConnection().getDbPassword());
-
-                        if (id != -1) {
-                            PreparedStatement preparedstatement =
-                                    connection.prepareStatement("DELETE FROM Animatori_" +
-                                            interfaccia1.getDbConnection().getDbTable() +
-                                            " WHERE ID='" + id + "';");
-
-                            preparedstatement.execute();
-                        }
-
-                        PreparedStatement preparedstatement =
-                                connection.prepareStatement("INSERT INTO Animatori_"
-                                        + interfaccia1.getDbConnection().getDbTable() +
-                                        " (cognomenome, animatore)" +
-                                        " values (?,?)");
-
-                        preparedstatement.setString(1, animatore.getCognome() + " " + animatore.getNome()
-                                + " " + animatore.getAnno());
-                        preparedstatement.setString(2, AddInterface.toString(animatore));
-                        preparedstatement.execute();
-
-                        interfaccia1.getFrame().dispose();
-                        frame1.dispose();
-
-                        SwingUtilities.invokeLater(new Runnable() {
-                            @Override
-                            public void run() {
-                                StartProgramInterface.createAndShowGUI();
-                            }
-                        });
-                    } catch (Exception ex) {
-                        ex.printStackTrace();
-                    }
-                }
+                salva(id, interfaccia1, frame1);
             }
         });
+        salvaButton.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                if (e.getKeyChar() == '\n')
+                    salva(id, interfaccia1, frame1);
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        });
+
         mButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -561,6 +314,277 @@ public class AddInterface {
             reader.close();
         } catch (Exception ex) {
             ex.printStackTrace();
+        }
+    }
+
+    private void salva(int id, Interface interfaccia1, JFrame frame1) {
+        final Border defaultBorder = cognomeJTF.getBorder();
+        int anno = -1;
+        int incontri = -1;
+        int incontri_tot = Integer.parseInt(incontri_ABC_totali.getText());
+        String attivita = null;
+        String animazione = null;
+        String giganti = null;
+        String giochi = null;
+        String festaFinale = null;
+        String preghiera = null;
+        String scenografia = null;
+        String segreteria = null;
+        String storia = null;
+
+        try {
+            anno = Integer.parseInt(annoJTF.getText());
+            annoJTF.setBorder(defaultBorder);
+        } catch (Exception ex) {
+            annoJTF.setBorder(new LineBorder(Color.RED, 2));
+            ex.printStackTrace();
+        }
+
+        try {
+            incontri = Integer.parseInt(incontri_ABC.getText());
+            incontri_ABC.setBorder(defaultBorder);
+        } catch (Exception ex) {
+            incontri_ABC.setBorder(new LineBorder(Color.RED, 2));
+            ex.printStackTrace();
+        }
+
+        if (!attivitaJTF.getText().equals("")) {
+            try {
+                int variabileInutile = Integer.parseInt(attivitaJTF.getText());
+
+                if (variabileInutile < 0 || variabileInutile > 10)
+                    throw new Exception("Wrong value attivita");
+
+                attivitaJTF.setBorder(defaultBorder);
+                attivita = attivitaJTF.getText();
+            } catch (Exception ex) {
+                attivitaJTF.setBorder(new LineBorder(Color.RED, 2));
+                ex.printStackTrace();
+            }
+        } else {
+            attivitaJTF.setBorder(defaultBorder);
+            attivita = "";
+        }
+
+        if (!animazioneJTF.getText().equals("")) {
+            try {
+                int variabileInutile = Integer.parseInt(animazioneJTF.getText());
+
+                if (variabileInutile < 0 || variabileInutile > 10)
+                    throw new Exception("Wrong value animazione");
+
+                animazioneJTF.setBorder(defaultBorder);
+                animazione = animazioneJTF.getText();
+            } catch (Exception ex) {
+                animazioneJTF.setBorder(new LineBorder(Color.RED, 2));
+                ex.printStackTrace();
+            }
+        } else {
+            animazioneJTF.setBorder(defaultBorder);
+            animazione = "";
+        }
+
+        if (!gigantiJTF.getText().equals("")) {
+            try {
+                int variabileInutile = Integer.parseInt(gigantiJTF.getText());
+
+                if (variabileInutile < 0 || variabileInutile > 10)
+                    throw new Exception("Wrong value giganti");
+
+                gigantiJTF.setBorder(defaultBorder);
+                giganti = gigantiJTF.getText();
+            } catch (Exception ex) {
+                gigantiJTF.setBorder(new LineBorder(Color.RED, 2));
+                ex.printStackTrace();
+            }
+        } else {
+            gigantiJTF.setBorder(defaultBorder);
+            giganti = "";
+        }
+
+        if (!giochiJTF.getText().equals("")) {
+            try {
+                int variabileInutile = Integer.parseInt(giochiJTF.getText());
+
+                if (variabileInutile < 0 || variabileInutile > 10)
+                    throw new Exception("Wrong value giochi");
+
+                giochiJTF.setBorder(defaultBorder);
+                giochi = giochiJTF.getText();
+            } catch (Exception ex) {
+                giochiJTF.setBorder(new LineBorder(Color.RED, 2));
+                ex.printStackTrace();
+            }
+        } else {
+            giochiJTF.setBorder(defaultBorder);
+            giochi = "";
+        }
+
+        if (!festafinaleJTF.getText().equals("")) {
+            try {
+                int variabileInutile = Integer.parseInt(festafinaleJTF.getText());
+
+                if (variabileInutile < 0 || variabileInutile > 10)
+                    throw new Exception("Wrong value festafinale");
+
+                festafinaleJTF.setBorder(defaultBorder);
+                festaFinale = festafinaleJTF.getText();
+            } catch (Exception ex) {
+                festafinaleJTF.setBorder(new LineBorder(Color.RED, 2));
+                ex.printStackTrace();
+            }
+        } else {
+            festafinaleJTF.setBorder(defaultBorder);
+            festaFinale = "";
+        }
+
+        if (!preghieraJTF.getText().equals("")) {
+            try {
+                int variabileInutile = Integer.parseInt(preghieraJTF.getText());
+
+                if (variabileInutile < 0 || variabileInutile > 10)
+                    throw new Exception("Wrong value preghiera");
+
+                preghieraJTF.setBorder(defaultBorder);
+                preghiera = preghieraJTF.getText();
+            } catch (Exception ex) {
+                preghieraJTF.setBorder(new LineBorder(Color.RED, 2));
+                ex.printStackTrace();
+            }
+        } else {
+            preghieraJTF.setBorder(defaultBorder);
+            preghiera = "";
+        }
+
+        if (!scenografiaJTF.getText().equals("")) {
+            try {
+                int variabileInutile = Integer.parseInt(scenografiaJTF.getText());
+
+                if (variabileInutile < 0 || variabileInutile > 10)
+                    throw new Exception("Wrong value scenografia");
+
+                scenografiaJTF.setBorder(defaultBorder);
+                scenografia = scenografiaJTF.getText();
+            } catch (Exception ex) {
+                scenografiaJTF.setBorder(new LineBorder(Color.RED, 2));
+                ex.printStackTrace();
+            }
+        } else {
+            scenografiaJTF.setBorder(defaultBorder);
+            scenografia = "";
+        }
+
+        if (!segreteriaJTF.getText().equals("")) {
+            try {
+                int variabileInutile = Integer.parseInt(segreteriaJTF.getText());
+
+                if (variabileInutile < 0 || variabileInutile > 10)
+                    throw new Exception("Wrong value segreteria");
+
+                segreteriaJTF.setBorder(defaultBorder);
+                segreteria = segreteriaJTF.getText();
+            } catch (Exception ex) {
+                segreteriaJTF.setBorder(new LineBorder(Color.RED, 2));
+                ex.printStackTrace();
+            }
+        } else {
+            segreteriaJTF.setBorder(defaultBorder);
+            segreteria = "";
+        }
+
+        if (!storiaJTF.getText().equals("")) {
+            try {
+                int variabileInutile = Integer.parseInt(storiaJTF.getText());
+
+                if (variabileInutile < 0 || variabileInutile > 10)
+                    throw new Exception("Wrong value storia");
+
+                storiaJTF.setBorder(defaultBorder);
+                storia = storiaJTF.getText();
+            } catch (Exception ex) {
+                storiaJTF.setBorder(new LineBorder(Color.RED, 2));
+                ex.printStackTrace();
+            }
+        } else {
+            storiaJTF.setBorder(defaultBorder);
+            storia = "";
+        }
+
+        animazioniEstive = new AnimazioneEstiva[6];
+
+        animazioniEstive[0] = new AnimazioneEstiva("Grest", getSelectedButtonText(grestGroup));
+        animazioniEstive[1] = new AnimazioneEstiva("MiniGrest", getSelectedButtonText(miniGrestGroup));
+        animazioniEstive[2] = new AnimazioneEstiva("CampoADO", getSelectedButtonText(caGroup));
+        animazioniEstive[3] = new AnimazioneEstiva("PitStop", getSelectedButtonText(psGroup));
+        animazioniEstive[4] = new AnimazioneEstiva("SanLuigiPreADO", getSelectedButtonText(slpaGroup));
+        animazioniEstive[5] = new AnimazioneEstiva("SanLuigi", getSelectedButtonText(slGroup));
+
+        boolean[] check = new boolean[9];
+        gruppiPreferenza = new GruppiPreferenza[9];
+
+        gruppiPreferenza[0] = new GruppiPreferenza("Attivita", attivita);
+        gruppiPreferenza[1] = new GruppiPreferenza("Animazione", animazione);
+        gruppiPreferenza[2] = new GruppiPreferenza("Giganti", giganti);
+        gruppiPreferenza[3] = new GruppiPreferenza("Giochi", giochi);
+        gruppiPreferenza[4] = new GruppiPreferenza("FestaFinale", festaFinale);
+        gruppiPreferenza[5] = new GruppiPreferenza("Preghiera", preghiera);
+        gruppiPreferenza[6] = new GruppiPreferenza("Scenografia", scenografia);
+        gruppiPreferenza[7] = new GruppiPreferenza("Segreteria", segreteria);
+        gruppiPreferenza[8] = new GruppiPreferenza("Storia", storia);
+
+        for (int i = 0; i < gruppiPreferenza.length; i++) {
+            if (gruppiPreferenza[i].getVoto().equals(""))
+                check[i] = true;
+        }
+
+        if (anno != -1 && incontri != -1 && incontri_tot != -1) {
+            Animatore animatore =
+                    new Animatore(cognomeJTF.getText(), nomeJTF.getText(),
+                            anno, incontri, incontri_tot, animazioniEstive,
+                            impegniJTF.getText(),
+                            gruppiPreferenza,
+                            AddInterface.checkArray(check));
+
+            try {
+                Connection connection = DriverManager.getConnection(
+                        "jdbc:mysql://" + interfaccia1.getDbConnection().getDbHost() + "/"
+                                + interfaccia1.getDbConnection().getDbName()
+                                + "?user="
+                                + interfaccia1.getDbConnection().getDbUser() + "&password="
+                                + interfaccia1.getDbConnection().getDbPassword());
+
+                if (id != -1) {
+                    PreparedStatement preparedstatement =
+                            connection.prepareStatement("DELETE FROM Animatori_" +
+                                    interfaccia1.getDbConnection().getDbTable() +
+                                    " WHERE ID='" + id + "';");
+
+                    preparedstatement.execute();
+                }
+
+                PreparedStatement preparedstatement =
+                        connection.prepareStatement("INSERT INTO Animatori_"
+                                + interfaccia1.getDbConnection().getDbTable() +
+                                " (cognomenome, animatore)" +
+                                " values (?,?)");
+
+                preparedstatement.setString(1, animatore.getCognome() + " " + animatore.getNome()
+                        + " " + animatore.getAnno());
+                preparedstatement.setString(2, AddInterface.toString(animatore));
+                preparedstatement.execute();
+
+                interfaccia1.getFrame().dispose();
+                frame1.dispose();
+
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        StartProgramInterface.createAndShowGUI();
+                    }
+                });
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
         }
     }
 

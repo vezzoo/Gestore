@@ -7,6 +7,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0b7477b-dd04-4417-a850-d5250fa53afa" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Data/show.data" beforeDir="false" afterPath="$PROJECT_DIR$/Data/show.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddInterface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddInterface$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddInterface$2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddInterface$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddInterface$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddInterface$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddInterface$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$19$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$19$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$19.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$20$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$20$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$20.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$21$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$21$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$21.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$22.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$23.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$24.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/AddBambinoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/AddBambinoInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/AddInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/AddInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/Interface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -44,7 +71,7 @@
       <file leaf-file-name="EntryPoint.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/EntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="30">
               <caret line="2" selection-start-line="2" selection-end-line="2" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -56,7 +83,7 @@
       <file leaf-file-name="StartProgramInterface.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/StartProgramInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
+            <state relative-caret-position="1680">
               <caret line="120" column="19" selection-start-line="120" selection-start-column="19" selection-end-line="120" selection-end-column="19" />
             </state>
           </provider>
@@ -65,57 +92,72 @@
       <file leaf-file-name="Interface.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="796" column="80" selection-start-line="796" selection-start-column="80" selection-end-line="796" selection-end-column="80" />
+            <state relative-caret-position="259">
+              <caret line="304" column="57" selection-start-line="304" selection-start-column="57" selection-end-line="304" selection-end-column="57" />
               <folding>
                 <element signature="e#3163#3346#0" expanded="true" />
                 <element signature="e#3345#3346#0" expanded="true" />
-                <element signature="e#3460#3643#0" expanded="true" />
-                <element signature="e#3642#3643#0" expanded="true" />
-                <element signature="e#3746#3925#0" expanded="true" />
-                <element signature="e#3924#3925#0" expanded="true" />
-                <element signature="e#9779#10148#0" expanded="true" />
-                <element signature="e#10147#10148#0" expanded="true" />
-                <element signature="e#10307#10678#0" expanded="true" />
-                <element signature="e#10677#10678#0" expanded="true" />
-                <element signature="e#10951#11129#0" expanded="true" />
-                <element signature="e#11128#11129#0" expanded="true" />
-                <element signature="e#11696#12458#0" expanded="true" />
-                <element signature="e#12457#12458#0" expanded="true" />
-                <element signature="e#13450#13742#0" expanded="true" />
-                <element signature="e#13741#13742#0" expanded="true" />
-                <element signature="e#13908#13909#0" expanded="true" />
-                <element signature="e#13952#13953#0" expanded="true" />
-                <element signature="e#14009#14010#0" expanded="true" />
-                <element signature="e#14053#14054#0" expanded="true" />
-                <element signature="e#14110#14111#0" expanded="true" />
-                <element signature="e#14154#14155#0" expanded="true" />
-                <element signature="e#14580#15338#0" expanded="true" />
-                <element signature="e#15337#15338#0" expanded="true" />
-                <element signature="e#16249#16535#0" expanded="true" />
-                <element signature="e#16534#16535#0" expanded="true" />
-                <element signature="e#16699#16700#0" expanded="true" />
-                <element signature="e#16743#16744#0" expanded="true" />
-                <element signature="e#16800#16801#0" expanded="true" />
-                <element signature="e#16844#16845#0" expanded="true" />
-                <element signature="e#16901#16902#0" expanded="true" />
-                <element signature="e#16945#16946#0" expanded="true" />
-                <element signature="e#18003#18181#0" expanded="true" />
-                <element signature="e#18180#18181#0" expanded="true" />
-                <element signature="e#23237#23436#0" expanded="true" />
-                <element signature="e#23435#23436#0" expanded="true" />
-                <element signature="e#38131#38323#0" expanded="true" />
-                <element signature="e#38322#38323#0" expanded="true" />
+                <element signature="e#3457#3638#0" expanded="true" />
+                <element signature="e#3637#3638#0" expanded="true" />
+                <element signature="e#3740#3915#0" expanded="true" />
+                <element signature="e#3914#3915#0" expanded="true" />
+                <element signature="e#4863#5878#0" expanded="true" />
+                <element signature="e#5877#5878#0" expanded="true" />
+                <element signature="e#6644#7621#0" expanded="true" />
+                <element signature="e#7620#7621#0" expanded="true" />
+                <element signature="e#9418#9787#0" expanded="true" />
+                <element signature="e#9563#9761#0" expanded="true" />
+                <element signature="e#9760#9761#0" expanded="true" />
+                <element signature="e#9786#9787#0" expanded="true" />
+                <element signature="e#9946#10317#0" expanded="true" />
+                <element signature="e#10091#10291#0" expanded="true" />
+                <element signature="e#10290#10291#0" expanded="true" />
+                <element signature="e#10316#10317#0" expanded="true" />
+                <element signature="e#10590#10768#0" expanded="true" />
+                <element signature="e#10767#10768#0" expanded="true" />
+                <element signature="e#11035#11462#0" expanded="true" />
+                <element signature="e#11461#11462#0" expanded="true" />
+                <element signature="e#11335#12097#0" expanded="true" />
+                <element signature="e#11820#12071#0" expanded="true" />
+                <element signature="e#12070#12071#0" expanded="true" />
+                <element signature="e#12096#12097#0" expanded="true" />
+                <element signature="e#13089#13381#0" expanded="true" />
+                <element signature="e#13380#13381#0" expanded="true" />
+                <element signature="e#14219#14977#0" expanded="true" />
+                <element signature="e#14702#14951#0" expanded="true" />
+                <element signature="e#14950#14951#0" expanded="true" />
+                <element signature="e#14976#14977#0" expanded="true" />
+                <element signature="e#15888#16174#0" expanded="true" />
+                <element signature="e#16173#16174#0" expanded="true" />
+                <element signature="e#17642#17820#0" expanded="true" />
+                <element signature="e#17819#17820#0" expanded="true" />
+                <element signature="e#18203#18400#0" expanded="true" />
+                <element signature="e#18399#18400#0" expanded="true" />
+                <element signature="e#22876#23075#0" expanded="true" />
+                <element signature="e#23074#23075#0" expanded="true" />
+                <element signature="e#25482#25491#0" expanded="true" />
+                <element signature="e#28014#28189#0" expanded="true" />
+                <element signature="e#28188#28189#0" expanded="true" />
+                <element signature="e#39547#39966#0" expanded="true" />
+                <element signature="e#39726#39940#0" expanded="true" />
+                <element signature="e#39939#39940#0" expanded="true" />
+                <element signature="e#39965#39966#0" expanded="true" />
+                <element signature="e#40124#40542#0" expanded="true" />
+                <element signature="e#40303#40516#0" expanded="true" />
+                <element signature="e#40515#40516#0" expanded="true" />
+                <element signature="e#40541#40542#0" expanded="true" />
+                <element signature="e#41059#41494#0" expanded="true" />
+                <element signature="e#41276#41468#0" expanded="true" />
+                <element signature="e#41467#41468#0" expanded="true" />
+                <element signature="e#41493#41494#0" expanded="true" />
+                <element signature="e#45967#46139#0" expanded="true" />
+                <element signature="e#46138#46139#0" expanded="true" />
+                <element signature="e#48384#48596#0" expanded="true" />
+                <element signature="e#48595#48596#0" expanded="true" />
+                <element signature="e#49170#49389#0" expanded="true" />
+                <element signature="e#49388#49389#0" expanded="true" />
+                <element signature="e#49816#50387#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.data" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Data/show.data">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -131,10 +173,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>setTa</find>
-      <find>loa</find>
-      <find>connection</find>
-      <find>docn</find>
       <find>Syst</find>
       <find>modi</find>
       <find>doConn</find>
@@ -152,7 +190,6 @@
       <find>setWidth</find>
       <find>animatore</find>
       <find>showP</find>
-      <find>load</find>
       <find>indexNome</find>
       <find>indexCognome</find>
       <find>StartProgramInterface.createAndShowGUI();</find>
@@ -161,6 +198,11 @@
       <find>account</find>
       <find>showPre</find>
       <find>showPreferenze</find>
+      <find>mostra taglia</find>
+      <find>Taglie</find>
+      <find>Tagli</find>
+      <find>Taglia</find>
+      <find>load</find>
     </findStrings>
     <replaceStrings>
       <replace>null</replace>
@@ -201,7 +243,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/NewTableInterface.form" />
         <option value="$PROJECT_DIR$/DBData.txt" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/PopupMenu_vs2.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Application/DataPersonalizzata.java" />
@@ -244,13 +285,14 @@
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/SwitchInterface.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/NewTableInterface.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/ConfirmInterface.java" />
-        <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddInterface.java" />
-        <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Application/EntryPoint.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/StartProgramInterface.form" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/StartProgramInterface.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/GestioneAccount.java" />
         <option value="$PROJECT_DIR$/Data/show.data" />
+        <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Application/SaveShow.java" />
+        <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddInterface.java" />
+        <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java" />
       </list>
     </option>
@@ -277,7 +319,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -344,10 +385,19 @@
               <item name="lucaVezzoli" type="462c0819:PsiDirectoryNode" />
               <item name="Interface" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Gestore_Grest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Gestore_Grest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="lucaVezzoli" type="462c0819:PsiDirectoryNode" />
+              <item name="Interface" type="462c0819:PsiDirectoryNode" />
+              <item name="AddBambinoInterface" type="e9f4de52:FormNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -723,27 +773,30 @@
       <workItem from="1525845780584" duration="198000" />
       <workItem from="1526230180679" duration="162000" />
       <workItem from="1526361219656" duration="1390000" />
+      <workItem from="1526367834045" duration="3118000" />
+      <workItem from="1526529224274" duration="1066000" />
+      <workItem from="1526552187725" duration="785000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="263114000" />
+    <option name="totallyTimeSpent" value="268083000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="732" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3141946" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36363637" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.26953748" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36363637" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.26910827" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20424597" />
@@ -752,8 +805,8 @@
       <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49739584" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.64274323" />
       <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.64274323" />
       <window_info anchor="right" id="Coverage" order="7" sideWeight="0.5026042" side_tool="true" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -761,6 +814,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32970452" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3141946" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -771,7 +825,21 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="741" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java</url>
+          <line>811</line>
+          <properties />
+          <option name="timeStamp" value="761" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java</url>
+          <line>807</line>
+          <properties />
+          <option name="timeStamp" value="762" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="763" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -779,13 +847,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/EntryPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/EntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -989,23 +1050,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="540" column="71" selection-start-line="540" selection-start-column="71" selection-end-line="540" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="417" column="71" selection-start-line="417" selection-start-column="71" selection-end-line="417" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/EntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="30">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1022,61 +1069,115 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/StartProgramInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
+        <state relative-caret-position="1680">
           <caret line="120" column="19" selection-start-line="120" selection-start-column="19" selection-end-line="120" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data/show.data">
+    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/SaveShow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        <state relative-caret-position="90">
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/show.data">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="277" lean-forward="true" selection-start-line="277" selection-end-line="277" />
+          <folding>
+            <element signature="class#11265:11565" />
+            <element signature="method#keyPressed#0;class#11265:11565" />
+            <element signature="method#keyReleased#0;class#11265:11565" />
+            <element signature="e#11694#24298#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="280" column="67" selection-start-line="280" selection-start-column="67" selection-end-line="280" selection-end-column="67" />
+          <folding>
+            <element signature="e#10808#10961#0" expanded="true" />
+            <element signature="e#10960#10961#0" expanded="true" />
+            <element signature="method#keyPressed#0;class#10922:11222" />
+            <element signature="method#keyReleased#0;class#10922:11222" />
+            <element signature="e#11528#18819#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="796" column="80" selection-start-line="796" selection-start-column="80" selection-end-line="796" selection-end-column="80" />
+        <state relative-caret-position="259">
+          <caret line="304" column="57" selection-start-line="304" selection-start-column="57" selection-end-line="304" selection-end-column="57" />
           <folding>
             <element signature="e#3163#3346#0" expanded="true" />
             <element signature="e#3345#3346#0" expanded="true" />
-            <element signature="e#3460#3643#0" expanded="true" />
-            <element signature="e#3642#3643#0" expanded="true" />
-            <element signature="e#3746#3925#0" expanded="true" />
-            <element signature="e#3924#3925#0" expanded="true" />
-            <element signature="e#9779#10148#0" expanded="true" />
-            <element signature="e#10147#10148#0" expanded="true" />
-            <element signature="e#10307#10678#0" expanded="true" />
-            <element signature="e#10677#10678#0" expanded="true" />
-            <element signature="e#10951#11129#0" expanded="true" />
-            <element signature="e#11128#11129#0" expanded="true" />
-            <element signature="e#11696#12458#0" expanded="true" />
-            <element signature="e#12457#12458#0" expanded="true" />
-            <element signature="e#13450#13742#0" expanded="true" />
-            <element signature="e#13741#13742#0" expanded="true" />
-            <element signature="e#13908#13909#0" expanded="true" />
-            <element signature="e#13952#13953#0" expanded="true" />
-            <element signature="e#14009#14010#0" expanded="true" />
-            <element signature="e#14053#14054#0" expanded="true" />
-            <element signature="e#14110#14111#0" expanded="true" />
-            <element signature="e#14154#14155#0" expanded="true" />
-            <element signature="e#14580#15338#0" expanded="true" />
-            <element signature="e#15337#15338#0" expanded="true" />
-            <element signature="e#16249#16535#0" expanded="true" />
-            <element signature="e#16534#16535#0" expanded="true" />
-            <element signature="e#16699#16700#0" expanded="true" />
-            <element signature="e#16743#16744#0" expanded="true" />
-            <element signature="e#16800#16801#0" expanded="true" />
-            <element signature="e#16844#16845#0" expanded="true" />
-            <element signature="e#16901#16902#0" expanded="true" />
-            <element signature="e#16945#16946#0" expanded="true" />
-            <element signature="e#18003#18181#0" expanded="true" />
-            <element signature="e#18180#18181#0" expanded="true" />
-            <element signature="e#23237#23436#0" expanded="true" />
-            <element signature="e#23435#23436#0" expanded="true" />
-            <element signature="e#38131#38323#0" expanded="true" />
-            <element signature="e#38322#38323#0" expanded="true" />
+            <element signature="e#3457#3638#0" expanded="true" />
+            <element signature="e#3637#3638#0" expanded="true" />
+            <element signature="e#3740#3915#0" expanded="true" />
+            <element signature="e#3914#3915#0" expanded="true" />
+            <element signature="e#4863#5878#0" expanded="true" />
+            <element signature="e#5877#5878#0" expanded="true" />
+            <element signature="e#6644#7621#0" expanded="true" />
+            <element signature="e#7620#7621#0" expanded="true" />
+            <element signature="e#9418#9787#0" expanded="true" />
+            <element signature="e#9563#9761#0" expanded="true" />
+            <element signature="e#9760#9761#0" expanded="true" />
+            <element signature="e#9786#9787#0" expanded="true" />
+            <element signature="e#9946#10317#0" expanded="true" />
+            <element signature="e#10091#10291#0" expanded="true" />
+            <element signature="e#10290#10291#0" expanded="true" />
+            <element signature="e#10316#10317#0" expanded="true" />
+            <element signature="e#10590#10768#0" expanded="true" />
+            <element signature="e#10767#10768#0" expanded="true" />
+            <element signature="e#11035#11462#0" expanded="true" />
+            <element signature="e#11461#11462#0" expanded="true" />
+            <element signature="e#11335#12097#0" expanded="true" />
+            <element signature="e#11820#12071#0" expanded="true" />
+            <element signature="e#12070#12071#0" expanded="true" />
+            <element signature="e#12096#12097#0" expanded="true" />
+            <element signature="e#13089#13381#0" expanded="true" />
+            <element signature="e#13380#13381#0" expanded="true" />
+            <element signature="e#14219#14977#0" expanded="true" />
+            <element signature="e#14702#14951#0" expanded="true" />
+            <element signature="e#14950#14951#0" expanded="true" />
+            <element signature="e#14976#14977#0" expanded="true" />
+            <element signature="e#15888#16174#0" expanded="true" />
+            <element signature="e#16173#16174#0" expanded="true" />
+            <element signature="e#17642#17820#0" expanded="true" />
+            <element signature="e#17819#17820#0" expanded="true" />
+            <element signature="e#18203#18400#0" expanded="true" />
+            <element signature="e#18399#18400#0" expanded="true" />
+            <element signature="e#22876#23075#0" expanded="true" />
+            <element signature="e#23074#23075#0" expanded="true" />
+            <element signature="e#25482#25491#0" expanded="true" />
+            <element signature="e#28014#28189#0" expanded="true" />
+            <element signature="e#28188#28189#0" expanded="true" />
+            <element signature="e#39547#39966#0" expanded="true" />
+            <element signature="e#39726#39940#0" expanded="true" />
+            <element signature="e#39939#39940#0" expanded="true" />
+            <element signature="e#39965#39966#0" expanded="true" />
+            <element signature="e#40124#40542#0" expanded="true" />
+            <element signature="e#40303#40516#0" expanded="true" />
+            <element signature="e#40515#40516#0" expanded="true" />
+            <element signature="e#40541#40542#0" expanded="true" />
+            <element signature="e#41059#41494#0" expanded="true" />
+            <element signature="e#41276#41468#0" expanded="true" />
+            <element signature="e#41467#41468#0" expanded="true" />
+            <element signature="e#41493#41494#0" expanded="true" />
+            <element signature="e#45967#46139#0" expanded="true" />
+            <element signature="e#46138#46139#0" expanded="true" />
+            <element signature="e#48384#48596#0" expanded="true" />
+            <element signature="e#48595#48596#0" expanded="true" />
+            <element signature="e#49170#49389#0" expanded="true" />
+            <element signature="e#49388#49389#0" expanded="true" />
+            <element signature="e#49816#50387#0" />
           </folding>
         </state>
       </provider>
