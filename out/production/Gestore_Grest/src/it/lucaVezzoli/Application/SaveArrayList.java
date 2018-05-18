@@ -2,15 +2,16 @@ package it.lucaVezzoli.Application;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Set;
 
 public class SaveArrayList implements Serializable {
-    private List<ICheckBox> iCheckBoxes;
+    private Set<ICheckBox> iCheckBoxes;
 
-    public SaveArrayList(List<ICheckBox> iCheckBoxes) {
+    public SaveArrayList(Set<ICheckBox> iCheckBoxes) {
         this.iCheckBoxes = iCheckBoxes;
     }
 
-    public List<ICheckBox> getiCheckBoxes() {
+    public Set<ICheckBox> getiCheckBoxes() {
         return iCheckBoxes;
     }
 

@@ -1,18 +1,14 @@
 package it.lucaVezzoli.Interface;
 
-import com.sun.rowset.internal.Row;
 import it.lucaVezzoli.Application.*;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
-import javax.xml.bind.DatatypeConverter;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
-import java.nio.file.Path;
 import java.sql.*;
 import java.util.*;
 import java.util.List;
@@ -119,8 +115,8 @@ public class Interface extends JPanel {
         this.connection = connection1;
         this.dbConnection = dbConnection1;
         this.account = account1;
-        this.tableAnimatori = loadData(tableAnimatori, "Animatori");
-        this.tableBambini = loadData(tableBambini, "Bambini");
+        this.tableAnimatori = loadData("Animatori");
+        this.tableBambini = loadData("Bambini");
         this.scrollA = new JScrollPane(tableAnimatori);
         this.scrollB = new JScrollPane(tableBambini);
         this.startProgramInterface = startProgramInterface;
@@ -137,8 +133,6 @@ public class Interface extends JPanel {
 
                             int id = Integer.parseInt(((String) tableAnimatori.getValueAt(selectedRow, 4))
                                     .replace("(", "").replace(")", "").replace("   ", ""));
-
-                            System.out.println(id);
 
                             for (Animatore animatore1 : animatori) {
                                 if (animatore1.getId() == id) {
@@ -305,11 +299,9 @@ public class Interface extends JPanel {
                     String userHomeFolder = System.getProperty("user.home");
                     userHomeFolder += File.separator + "Desktop" + File.separator + "File esportati dal database"
                             + File.separator + estensione.toUpperCase();
-                    File animatori = new File(userHomeFolder, "animatori." + estensione);
                     File bambini = new File(userHomeFolder, "bambini." + estensione);
 
-                    animatoriToCSV(animatori.toString());
-//                    bambiniToCSV(tableBambini, bambini.toString());
+                    bambiniToCSV(bambini.toString());
 
                     JOptionPane.showMessageDialog(null, "Salvataggio riuscito!\nDirectory:\n" + userHomeFolder,
                             "Completamento operazione", JOptionPane.INFORMATION_MESSAGE);
@@ -633,7 +625,7 @@ public class Interface extends JPanel {
         filters.add(showFilters);
         menuBar.add(filters);
 
-        List<ICheckBox> iCheckBoxes = null;
+        Set<ICheckBox> iCheckBoxes = null;
         ArrayList<String> settimane = new ArrayList<>();
         ArrayList<String> taglia = new ArrayList<>();
         ArrayList<String> maglietta = new ArrayList<>();
@@ -706,17 +698,78 @@ public class Interface extends JPanel {
                             bambiniFiltrati.add(bambino);
                 }
 
-                Object[][] data = new Object[bambiniFiltrati.size()][4];
+                int lenCol = 5;
+
+                if (showPreferenze.isSelected())
+                    lenCol++;
+                if (showMagliette.isSelected())
+                    lenCol++;
+                if (showTaglia.isSelected())
+                    lenCol++;
+
+                Object[][] data = new Object[bambiniFiltrati.size()][lenCol];
 
                 int i = 0;
 
                 for (Bambino bambino : bambiniFiltrati) {
-                    data[i][0] = "   " + bambino.getCognome();
-                    data[i][1] = "   " + bambino.getNome();
-                    data[i][2] = "   " + bambino.getAnno();
+                    data[i][indexCognome] = "   " + bambino.getCognome();
+                    data[i][indexNome] = "   " + bambino.getNome();
+                    data[i][indexAnno] = "   " + bambino.getAnno();
+                    data[i][lenCol - 1] = "   (" + bambino.getId() + ")";
 
-                    i++;
+                    if (showPreferenze.isSelected() && !showMagliette.isSelected() && !showTaglia.isSelected()) {
+                        data[i][4] = "   " + bambino.getPreferenza();
+                    } else if (!showPreferenze.isSelected() && showMagliette.isSelected() && !showTaglia.isSelected()) {
+                        data[i][4] = "   " + bambino.getMaglietta();
+                    } else if (!showPreferenze.isSelected() && !showMagliette.isSelected() && showTaglia.isSelected()) {
+                        data[i][4] = "   " + bambino.getTaglia();
+                    } else if (showPreferenze.isSelected() && showMagliette.isSelected() && !showTaglia.isSelected()) {
+                        data[i][4] = "   " + bambino.getPreferenza();
+                        data[i][5] = "   " + bambino.getMaglietta();
+                    } else if (!showPreferenze.isSelected() && showMagliette.isSelected() && showTaglia.isSelected()) {
+                        data[i][4] = "   " + bambino.getMaglietta();
+                        data[i][5] = "   " + bambino.getTaglia();
+                    } else if (showPreferenze.isSelected() && !showMagliette.isSelected() && showTaglia.isSelected()) {
+                        data[i][4] = "   " + bambino.getPreferenza();
+                        data[i][5] = "   " + bambino.getTaglia();
+                    } else if (showPreferenze.isSelected() && showMagliette.isSelected() && showTaglia.isSelected()) {
+                        data[i][4] = "   " + bambino.getPreferenza();
+                        data[i][5] = "   " + bambino.getMaglietta();
+                        data[i][6] = "   " + bambino.getTaglia();
+                    }
+
+                    data[i][0] = ++i;
                 }
+
+                Object[] array = new Object[data.length];
+
+                for (int d = 0; d < array.length; d++)
+                    array[d] = data[d][indexCognome];
+
+                Arrays.sort(array, 0, array.length);
+                Object[] sup;
+                Bambino bambinoSup1;
+                Bambino bambinoSup2;
+
+                for (int e = 0; e < array.length; e++) {
+                    for (int k = e; k < data.length; k++) {
+                        if (array[e].equals(data[k][indexCognome])) {
+                            sup = data[k];
+                            data[k] = data[e];
+                            data[e] = sup;
+
+                            bambinoSup1 = bambini.get(k);
+                            bambinoSup2 = bambini.get(e);
+                            bambini.remove(k);
+                            bambini.add(k, bambinoSup2);
+                            bambini.remove(e);
+                            bambini.add(e, bambinoSup1);
+                        }
+                    }
+                }
+
+                for (int f = 0; f < data.length; f++)
+                    data[f][0] = f + 1;
 
                 createAndShowTable(data, tableBambini);
 
@@ -728,7 +781,9 @@ public class Interface extends JPanel {
         }
     }
 
-    public JTable loadData(JTable table, String type) {
+    public JTable loadData(String type) {
+        JTable table;
+
         try {
             String request = "SELECT * FROM " + type + "_" + dbConnection.getDbTable();
 
@@ -746,64 +801,67 @@ public class Interface extends JPanel {
 
             Object[][] data = load(resultSet, len, type, animatori, bambini);
 
-            table = new JTable() {
-                @Override
-                public boolean isCellEditable(int row, int column) {
-                    return false;
-                }
-            };
-
-            table.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-
-            table.setFont(new Font("Verdana", Font.PLAIN, 15));
-            table.setRowHeight(25);
-
-            ((DefaultTableModel) table.getModel()).addColumn("N");
-            ((DefaultTableModel) table.getModel()).addColumn("Cognome");
-            ((DefaultTableModel) table.getModel()).addColumn("Nome");
-            ((DefaultTableModel) table.getModel()).addColumn("Anno di nascita");
-            if (type.equals("Bambini")) {
-                if (showPreferenze.isSelected())
-                    ((DefaultTableModel) table.getModel()).addColumn("Preferenze");
-                if (showMagliette.isSelected())
-                    ((DefaultTableModel) table.getModel()).addColumn("Magliette");
-                if (showTaglia.isSelected())
-                    ((DefaultTableModel) table.getModel()).addColumn("Taglia");
-            }
-            ((DefaultTableModel) table.getModel()).addColumn("ID");
-
-            table = createAndShowTable(data, table);
-
-            table.setAutoResizeMode(JTable.AUTO_RESIZE_LAST_COLUMN);
-
-            table.getColumnModel().getColumn(0).setPreferredWidth(80);
-            table.getColumnModel().getColumn(3).setPreferredWidth(100);
-
-            if (type.equals("Bambini") && table.getColumnCount() == 6) {
-                table.getColumnModel().getColumn(1).setPreferredWidth(350);
-                table.getColumnModel().getColumn(2).setPreferredWidth(350);
-                table.getColumnModel().getColumn(4).setPreferredWidth(300);
-            } else if (type.equals("Bambini") && table.getColumnCount() == 7) {
-                table.getColumnModel().getColumn(1).setPreferredWidth(350);
-                table.getColumnModel().getColumn(2).setPreferredWidth(350);
-                table.getColumnModel().getColumn(4).setPreferredWidth(150);
-                table.getColumnModel().getColumn(5).setPreferredWidth(150);
-            } else if (type.equals("Bambini") && table.getColumnCount() == 8) {
-                table.getColumnModel().getColumn(1).setPreferredWidth(275);
-                table.getColumnModel().getColumn(2).setPreferredWidth(275);
-                table.getColumnModel().getColumn(4).setPreferredWidth(150);
-                table.getColumnModel().getColumn(5).setPreferredWidth(150);
-                table.getColumnModel().getColumn(6).setPreferredWidth(150);
-            } else {
-                table.getColumnModel().getColumn(1).setPreferredWidth(500);
-                table.getColumnModel().getColumn(2).setPreferredWidth(500);
-            }
-        } catch (
-                Exception exception)
-
-        {
+            table = createTable(data, type);
+        } catch (Exception exception) {
             exception.printStackTrace();
             table = new JTable();
+        }
+
+        return table;
+    }
+
+    private JTable createTable(Object[][] data, String type) {
+        JTable table = new JTable() {
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
+
+        table.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+
+        table.setFont(new Font("Verdana", Font.PLAIN, 15));
+        table.setRowHeight(25);
+
+        ((DefaultTableModel) table.getModel()).addColumn("N");
+        ((DefaultTableModel) table.getModel()).addColumn("Cognome");
+        ((DefaultTableModel) table.getModel()).addColumn("Nome");
+        ((DefaultTableModel) table.getModel()).addColumn("Anno di nascita");
+        if (type.equals("Bambini")) {
+            if (showPreferenze.isSelected())
+                ((DefaultTableModel) table.getModel()).addColumn("Preferenze");
+            if (showMagliette.isSelected())
+                ((DefaultTableModel) table.getModel()).addColumn("Magliette");
+            if (showTaglia.isSelected())
+                ((DefaultTableModel) table.getModel()).addColumn("Taglia");
+        }
+        ((DefaultTableModel) table.getModel()).addColumn("ID");
+
+        table = createAndShowTable(data, table);
+
+        table.setAutoResizeMode(JTable.AUTO_RESIZE_LAST_COLUMN);
+
+        table.getColumnModel().getColumn(0).setPreferredWidth(80);
+        table.getColumnModel().getColumn(3).setPreferredWidth(100);
+
+        if (type.equals("Bambini") && table.getColumnCount() == 6) {
+            table.getColumnModel().getColumn(1).setPreferredWidth(350);
+            table.getColumnModel().getColumn(2).setPreferredWidth(350);
+            table.getColumnModel().getColumn(4).setPreferredWidth(300);
+        } else if (type.equals("Bambini") && table.getColumnCount() == 7) {
+            table.getColumnModel().getColumn(1).setPreferredWidth(350);
+            table.getColumnModel().getColumn(2).setPreferredWidth(350);
+            table.getColumnModel().getColumn(4).setPreferredWidth(150);
+            table.getColumnModel().getColumn(5).setPreferredWidth(150);
+        } else if (type.equals("Bambini") && table.getColumnCount() == 8) {
+            table.getColumnModel().getColumn(1).setPreferredWidth(275);
+            table.getColumnModel().getColumn(2).setPreferredWidth(275);
+            table.getColumnModel().getColumn(4).setPreferredWidth(150);
+            table.getColumnModel().getColumn(5).setPreferredWidth(150);
+            table.getColumnModel().getColumn(6).setPreferredWidth(150);
+        } else {
+            table.getColumnModel().getColumn(1).setPreferredWidth(500);
+            table.getColumnModel().getColumn(2).setPreferredWidth(500);
         }
 
         return table;
@@ -872,7 +930,8 @@ public class Interface extends JPanel {
         return table;
     }
 
-    public Object[][] load(ResultSet resultSet, int len, String type, ArrayList<Animatore> animatori, ArrayList<Bambino> bambini) {
+    public Object[][] load(ResultSet resultSet, int len, String
+            type, ArrayList<Animatore> animatori, ArrayList<Bambino> bambini) {
         try {
             if (type.equals("Animatori")) {
                 Object[][] data = new Object[len][5];
@@ -888,7 +947,7 @@ public class Interface extends JPanel {
                     data[index][0] = " ";
                     data[index][indexCognome] = "   " + animatore.getCognome();
                     data[index][indexNome] = "   " + animatore.getNome();
-                    data[index][3] = "   " + animatore.getAnno();
+                    data[index][indexAnno] = "   " + animatore.getAnno();
                     data[index][4] = "   (" + animatore.getId() + ")";
 
                     animatori.add(animatore);
@@ -1310,33 +1369,17 @@ public class Interface extends JPanel {
         }
     }
 
-    private void animatoriToCSV(String fileName) throws FileNotFoundException, UnsupportedEncodingException {
+    private void bambiniToCSV(String fileName) throws FileNotFoundException, UnsupportedEncodingException {
         PrintWriter writer = new PrintWriter(new File(fileName), "UTF-8");
 
-        writer.print("Id, Cognome, Nome, Anno, Partecipazione ABC, Incontri totali," +
-                "Grest, Minigrest, Campo ADO, Pit Stop, San Luigi preADO, San Luigi, Impegni," +
-                "Attività, Animazione, Giganti, Giochi, Festa finale, Preghiera, Scenografia," +
-                "Segreteria, Storia, Responsabile");
+        writer.print("Id, Cognome, Nome, Data di nascita, Classe, Tel 1, Tel2");
         writer.print("\n\n");
 
-        for (Animatore animatore : animatori) {
-            String toWrite = animatore.getId() + "," + animatore.getCognome() + "," +
-                    animatore.getNome() + "," + animatore.getAnno() + "," + animatore.getAbc_incontri_partecipato() + "," +
-                    animatore.getAbc_incontri_totali() + ",";
+        for (Bambino bambino : bambini)
+            writer.println(bambino.getId() + "," + bambino.getCognome() + "," +
+                    bambino.getNome() + "," + bambino.getDataDiNascita() + "," +
+                    bambino.getClasse() + "," + bambino.getTelefono1() + "," + bambino.getTelefono2());
 
-            for (AnimazioneEstiva animazioneEstiva : animatore.getAnimazioneEstiva())
-                toWrite += (animazioneEstiva.getPartecipazione().equals("Non specificato")
-                        ? "N/S" : animazioneEstiva.getPartecipazione()) + ",";
-
-            toWrite += animatore.getImpegni() + ",";
-
-            for (GruppiPreferenza gruppoPreferenza : animatore.getGruppiPreferenza())
-                toWrite += (gruppoPreferenza.getVoto().equals("") ? "N/S" : gruppoPreferenza.getVoto()) + ",";
-
-            toWrite += animatore.getResponsabile() == true ? "Si" : "No";
-
-            writer.println(toWrite);
-        }
         writer.close();
     }
 

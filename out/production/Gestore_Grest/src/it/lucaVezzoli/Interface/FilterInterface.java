@@ -10,6 +10,8 @@ import java.awt.event.ActionListener;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 public class FilterInterface extends JPanel {
     private JButton salvaButton;
@@ -22,13 +24,13 @@ public class FilterInterface extends JPanel {
     private JPanel entrataAnticipataPanel;
     private JPanel pranzoPanel;
     private JPanel buttonsPanel;
-    private ArrayList<ICheckBox> iCheckBoxes = new ArrayList<>();
+    private Set<ICheckBox> iCheckBoxes = new HashSet<>();
 
     public FilterInterface(JFrame frame, Interface interfaccia, ArrayList<ArrayList<String>> filtri) {
         final JFrame frame1 = frame;
         final Interface interfaccia1 = interfaccia;
 
-        setLayout(new GridLayout(0, 1));
+        setLayout(new GridLayout(0, 2));
         settimanePanel = new JPanel(new GridLayout(0, 3));
         tagliaPanel = new JPanel(new GridLayout(0, 3));
         magliettePanel = new JPanel(new GridLayout(0, 3));
@@ -46,6 +48,14 @@ public class FilterInterface extends JPanel {
         entrataAnticipataPanel.setBorder(BorderFactory.createTitledBorder("Entrata anticipata:"));
         pranzoPanel.setBorder(BorderFactory.createTitledBorder("Pranzo:"));
 
+        settimanePanel.setName("settimanePanel");
+        tagliaPanel.setName("tagliaPanel");
+        magliettePanel.setName("magliettePanel");
+        pitStopPanel.setName("pitStopPanel");
+        pagamentoPanel.setName("pagamentoPanel");
+        entrataAnticipataPanel.setName("entrataAnticipataPanel");
+        pranzoPanel.setName("pranzoPanel");
+
         for (int i = 0; i < filtri.size(); i++)
             Collections.reverse(filtri.get(i));
 
@@ -53,28 +63,35 @@ public class FilterInterface extends JPanel {
             for (int k = 0; k < filtri.get(i).size(); k++)
                 switch (i) {
                     case 0:
-                        createAndShowCheckBox(filtri.get(i).get(k), settimanePanel, "settimanePanel");
+                        createCheckBox(filtri.get(i).get(k), settimanePanel.getName());
                         break;
                     case 1:
-                        createAndShowCheckBox(filtri.get(i).get(k), tagliaPanel, "tagliaPanel");
+                        createCheckBox(filtri.get(i).get(k), tagliaPanel.getName());
                         break;
                     case 2:
-                        createAndShowCheckBox(filtri.get(i).get(k), magliettePanel, "magliettePanel");
+                        createCheckBox(filtri.get(i).get(k), magliettePanel.getName());
                         break;
                     case 3:
-                        createAndShowCheckBox(filtri.get(i).get(k), pitStopPanel, "pitStopPanel");
+                        createCheckBox(filtri.get(i).get(k), pitStopPanel.getName());
                         break;
                     case 4:
-                        createAndShowCheckBox(filtri.get(i).get(k), pagamentoPanel, "pagamentoPanel");
+                        createCheckBox(filtri.get(i).get(k), pagamentoPanel.getName());
                         break;
                     case 5:
-                        createAndShowCheckBox(filtri.get(i).get(k), entrataAnticipataPanel, "entrataAnticipataPanel");
+                        createCheckBox(filtri.get(i).get(k), entrataAnticipataPanel.getName());
                         break;
                     case 6:
-                        createAndShowCheckBox(filtri.get(i).get(k), pranzoPanel, "pranzoPanel");
+                        createCheckBox(filtri.get(i).get(k), pranzoPanel.getName());
                         break;
                 }
 
+        showCheckBox(settimanePanel);
+        showCheckBox(tagliaPanel);
+        showCheckBox(magliettePanel);
+        showCheckBox(pitStopPanel);
+        showCheckBox(pagamentoPanel);
+        showCheckBox(entrataAnticipataPanel);
+        showCheckBox(pranzoPanel);
 
         add(settimanePanel);
         add(tagliaPanel);
@@ -145,14 +162,19 @@ public class FilterInterface extends JPanel {
         }
     }
 
-    private void createAndShowCheckBox(String text, JPanel panel, String id) {
-        ICheckBox checkBox = new ICheckBox(text, id + "_" + text);
-        panel.add(checkBox);
+    private void createCheckBox(String text, String panelName) {
+        ICheckBox checkBox = new ICheckBox(text, panelName + "_" + text);
         iCheckBoxes.add(checkBox);
     }
 
-    private static ArrayList<ICheckBox> checkICheckBoxes(ArrayList<ICheckBox> iCheckBoxes) {
-        ArrayList<ICheckBox> iCheckBoxArrayList = new ArrayList<>();
+    private void showCheckBox(JPanel panel) {
+        for (ICheckBox checkBox : iCheckBoxes)
+            if (panel.getName().equals(checkBox.getId().split("_")[0]))
+                panel.add(checkBox);
+    }
+
+    private static Set<ICheckBox> checkICheckBoxes(Set<ICheckBox> iCheckBoxes) {
+        Set<ICheckBox> iCheckBoxArrayList = new HashSet<>();
 
         for (ICheckBox iCheckBox : iCheckBoxes)
             if (iCheckBox.isSelected())
@@ -161,7 +183,7 @@ public class FilterInterface extends JPanel {
         return iCheckBoxArrayList;
     }
 
-    public ArrayList<ICheckBox> getiCheckBoxes() {
+    public Set<ICheckBox> getiCheckBoxes() {
         return iCheckBoxes;
     }
 
