@@ -11,7 +11,6 @@ import java.awt.event.*;
 import java.io.*;
 import java.sql.*;
 import java.util.*;
-import java.util.List;
 
 public class Interface extends JPanel {
     private JPanel upPanel;
@@ -37,11 +36,9 @@ public class Interface extends JPanel {
     private JCheckBoxMenuItem showPreferenze;
     private JCheckBoxMenuItem showMagliette;
     private JCheckBoxMenuItem showTaglia;
-    private JMenuItem sincronizzaDB;
+    private JMenuItem showIP;
+    private JMenuItem exportToCSV;
     private JMenu visualizzaAnni;
-    private JMenu esporta;
-    private JMenuItem toCSV;
-    private JMenuItem toXLS;
     private JTextField cercaAnimatori;
     private JTextField cercaBambini;
     private DBConnection dbConnection;
@@ -279,31 +276,41 @@ public class Interface extends JPanel {
         visualizzaAnni = new JMenu("Visualizza tutti gli anni");
         visualizzaAnni.setMnemonic(KeyEvent.VK_V);
 
-        sincronizzaDB = new JMenuItem("Mostra indirizzo IP");
-        sincronizzaDB.setMnemonic(KeyEvent.VK_S);
-        sincronizzaDB.addActionListener(new ActionListener() {
+        showIP = new JMenuItem("Mostra indirizzo IP");
+        showIP.setMnemonic(KeyEvent.VK_S);
+        showIP.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 SynchroInterface.createAndShowGUI();
             }
         });
 
-        esporta = new JMenu("Esporta in");
-
-        toCSV = new JMenuItem(".CSV");
-        toCSV.addActionListener(new ActionListener() {
+        exportToCSV = new JMenuItem("Esporta in .CSV");
+        exportToCSV.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                final JFileChooser chooser = new JFileChooser();
+
+                String fileA = loadFile();
+                if (fileA == null)
+                    fileA = System.getProperty("user.home") + File.separator + "Desktop";
+
+                chooser.setCurrentDirectory(new File(fileA));
+
+                int returnVal = chooser.showOpenDialog(frame.getParent());
+                String file = null;
+
+                if (returnVal == JFileChooser.APPROVE_OPTION) {
+                    file = chooser.getSelectedFile().toString();
+                }
+
                 try {
-                    String estensione = "csv";
-                    String userHomeFolder = System.getProperty("user.home");
-                    userHomeFolder += File.separator + "Desktop" + File.separator + "File esportati dal database"
-                            + File.separator + estensione.toUpperCase();
-                    File bambini = new File(userHomeFolder, "bambini." + estensione);
+                    if (file == null)
+                        throw new FileNotFoundException("Directory errata");
 
-                    bambiniToCSV(bambini.toString());
-
-                    JOptionPane.showMessageDialog(null, "Salvataggio riuscito!\nDirectory:\n" + userHomeFolder,
+                    saveFile(file);
+                    bambiniToCSV(file);
+                    JOptionPane.showMessageDialog(null, "Salvataggio riuscito!\n" + file,
                             "Completamento operazione", JOptionPane.INFORMATION_MESSAGE);
                 } catch (FileNotFoundException | UnsupportedEncodingException e1) {
                     e1.printStackTrace();
@@ -313,30 +320,22 @@ public class Interface extends JPanel {
             }
         });
 
-        toXLS = new JMenuItem(".XLS (consigliato)");
-        toXLS.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-
-        esporta.add(toCSV);
-        esporta.add(toXLS);
-
         impostazioni.add(connettivita);
         impostazioni.add(gestioneAccount);
         impostazioni.add(visualizzaAnni);
-        impostazioni.add(esporta);
-        impostazioni.add(sincronizzaDB);
+        impostazioni.add(exportToCSV);
+        impostazioni.add(showIP);
         menuBar.add(impostazioni);
 
         upPanel.add(menuBar, BorderLayout.PAGE_START);
 
         add(upPanel, BorderLayout.PAGE_START);
+
         add(downPanel, BorderLayout.CENTER);
 
-        stampaAnimatori = new JButton(new ImageIcon("Data/printer-tool32.png"));
+        stampaAnimatori = new
+
+                JButton(new ImageIcon("Data/printer-tool32.png"));
         stampaAnimatori.setMnemonic(KeyEvent.VK_P);
         final JFrame frame1 = frame;
         stampaAnimatori.addActionListener(new ActionListener() {
@@ -362,23 +361,37 @@ public class Interface extends JPanel {
 
         stampaAnimatori.setVisible(false);
 
-        tableAnimatoriStampa.add(Box.createRigidArea(new Dimension(150, 0)), BorderLayout.LINE_START);
+        tableAnimatoriStampa.add(Box.createRigidArea(new
+
+                Dimension(150, 0)), BorderLayout.LINE_START);
         tableAnimatoriStampa.add(stampaAnimatori, BorderLayout.CENTER);
-        tableAnimatoriStampa.add(Box.createRigidArea(new Dimension(150, 0)), BorderLayout.LINE_END);
+        tableAnimatoriStampa.add(Box.createRigidArea(new
+
+                Dimension(150, 0)), BorderLayout.LINE_END);
 
         tabAnimatoriPanelUp.add(tableAnimatoriStampa);
 
-        dbNameLBL1 = new JLabel("Anno database:     " + dbConnection.getDbTable());
+        dbNameLBL1 = new
+
+                JLabel("Anno database:     " + dbConnection.getDbTable());
         dbNameLBL1.setHorizontalAlignment(SwingConstants.CENTER);
-        dbNameLBL1.setFont(new Font("Verdana", Font.PLAIN, 20));
-        dbNameLBL1.setForeground(new Color(255, 0, 0));
+        dbNameLBL1.setFont(new
+
+                Font("Verdana", Font.PLAIN, 20));
+        dbNameLBL1.setForeground(new
+
+                Color(255, 0, 0));
         tabAnimatoriPanelUp.add(dbNameLBL1);
 
         String text = "Ricerca COGNOME, NOME, ANNO";
 
-        cercaAnimatori = new JTextField();
+        cercaAnimatori = new
+
+                JTextField();
         cercaAnimatori.setText(text);
-        cercaAnimatori.setFont(new Font("", Font.ITALIC, 11));
+        cercaAnimatori.setFont(new
+
+                Font("", Font.ITALIC, 11));
         cercaAnimatori.setForeground(Color.LIGHT_GRAY);
         cercaAnimatori.addMouseListener(new MouseAdapter() {
             @Override
@@ -388,93 +401,117 @@ public class Interface extends JPanel {
                 cercaAnimatori.setForeground(Color.BLACK);
             }
         });
-        cercaAnimatori.getDocument().addDocumentListener(new DocumentListener() {
-            public void changedUpdate(DocumentEvent e) {
-                doResearch();
-            }
+        cercaAnimatori.getDocument().
 
-            public void removeUpdate(DocumentEvent e) {
-                doResearch();
-            }
+                addDocumentListener(new DocumentListener() {
+                    public void changedUpdate(DocumentEvent e) {
+                        doResearch();
+                    }
 
-            public void insertUpdate(DocumentEvent e) {
-                doResearch();
-            }
+                    public void removeUpdate(DocumentEvent e) {
+                        doResearch();
+                    }
 
-            public void doResearch() {
-                search(cercaAnimatori.getText()
-                        .replace(",", "").replace(" ", "%"), "Animatori");
-            }
-        });
+                    public void insertUpdate(DocumentEvent e) {
+                        doResearch();
+                    }
+
+                    public void doResearch() {
+                        search(cercaAnimatori.getText()
+                                .replace(",", "").replace(" ", "%"), "Animatori");
+                    }
+                });
         cercaAnimatori.setVisible(false);
         tabAnimatoriPanelUp.add(cercaAnimatori);
 
-        stampaBambini = new JButton(new ImageIcon("Data/printer-tool32.png"));
+        stampaBambini = new
+
+                JButton(new ImageIcon("Data/printer-tool32.png"));
         stampaBambini.setMnemonic(KeyEvent.VK_P);
-        stampaBambini.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                final JTable table = tableBambini;
-                table.setFont(new Font("", Font.PLAIN, 45));
-                table.getTableHeader().setFont(new Font("", Font.PLAIN, 60));
-                table.getTableHeader().setSize(new Dimension(100, 80));
-                table.setRowHeight(55);
+        stampaBambini.addActionListener(new
 
-                frame1.dispose();
+                                                ActionListener() {
+                                                    @Override
+                                                    public void actionPerformed(ActionEvent e) {
+                                                        final JTable table = tableBambini;
+                                                        table.setFont(new Font("", Font.PLAIN, 45));
+                                                        table.getTableHeader().setFont(new Font("", Font.PLAIN, 60));
+                                                        table.getTableHeader().setSize(new Dimension(100, 80));
+                                                        table.setRowHeight(55);
 
-                SwingUtilities.invokeLater(new Runnable() {
-                    @Override
-                    public void run() {
-                        PrintInterface.createAndShowGUI(table,
-                                Interface.this, "bambini");
-                    }
-                });
-            }
-        });
+                                                        frame1.dispose();
+
+                                                        SwingUtilities.invokeLater(new Runnable() {
+                                                            @Override
+                                                            public void run() {
+                                                                PrintInterface.createAndShowGUI(table,
+                                                                        Interface.this, "bambini");
+                                                            }
+                                                        });
+                                                    }
+                                                });
         stampaBambini.setVisible(false);
 
-        tableBambiniStampa.add(Box.createRigidArea(new Dimension(150, 0)), BorderLayout.LINE_START);
+        tableBambiniStampa.add(Box.createRigidArea(new
+
+                Dimension(150, 0)), BorderLayout.LINE_START);
         tableBambiniStampa.add(stampaBambini, BorderLayout.CENTER);
-        tableBambiniStampa.add(Box.createRigidArea(new Dimension(150, 0)), BorderLayout.LINE_END);
+        tableBambiniStampa.add(Box.createRigidArea(new
+
+                Dimension(150, 0)), BorderLayout.LINE_END);
 
         tabBambiniPanelUp.add(tableBambiniStampa);
 
-        dbNameLBL2 = new JLabel("Anno database:     " + dbConnection.getDbTable());
+        dbNameLBL2 = new
+
+                JLabel("Anno database:     " + dbConnection.getDbTable());
         dbNameLBL2.setHorizontalAlignment(SwingConstants.CENTER);
-        dbNameLBL2.setFont(new Font("Verdana", Font.PLAIN, 20));
-        dbNameLBL2.setForeground(new Color(255, 0, 0));
+        dbNameLBL2.setFont(new
+
+                Font("Verdana", Font.PLAIN, 20));
+        dbNameLBL2.setForeground(new
+
+                Color(255, 0, 0));
         tabBambiniPanelUp.add(dbNameLBL2);
 
-        cercaBambini = new JTextField();
+        cercaBambini = new
+
+                JTextField();
         cercaBambini.setText(text);
-        cercaBambini.setFont(new Font("", Font.ITALIC, 11));
+        cercaBambini.setFont(new
+
+                Font("", Font.ITALIC, 11));
         cercaBambini.setForeground(Color.LIGHT_GRAY);
-        cercaBambini.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                cercaBambini.setText("");
-                cercaBambini.setFont(new Font("", Font.PLAIN, 14));
-                cercaBambini.setForeground(Color.BLACK);
-            }
-        });
-        cercaBambini.getDocument().addDocumentListener(new DocumentListener() {
-            public void changedUpdate(DocumentEvent e) {
-                doResearch();
-            }
+        cercaBambini.addMouseListener(new
 
-            public void removeUpdate(DocumentEvent e) {
-                doResearch();
-            }
+                                              MouseAdapter() {
+                                                  @Override
+                                                  public void mouseClicked(MouseEvent e) {
+                                                      cercaBambini.setText("");
+                                                      cercaBambini.setFont(new Font("", Font.PLAIN, 14));
+                                                      cercaBambini.setForeground(Color.BLACK);
+                                                  }
+                                              });
+        cercaBambini.getDocument().
 
-            public void insertUpdate(DocumentEvent e) {
-                doResearch();
-            }
+                addDocumentListener(new DocumentListener() {
+                    public void changedUpdate(DocumentEvent e) {
+                        doResearch();
+                    }
 
-            public void doResearch() {
-                search(cercaBambini.getText()
-                        .replace(",", "").replace(" ", "%"), "Bambini");
-            }
-        });
+                    public void removeUpdate(DocumentEvent e) {
+                        doResearch();
+                    }
+
+                    public void insertUpdate(DocumentEvent e) {
+                        doResearch();
+                    }
+
+                    public void doResearch() {
+                        search(cercaBambini.getText()
+                                .replace(",", "").replace(" ", "%"), "Bambini");
+                    }
+                });
         cercaBambini.setVisible(false);
         tabBambiniPanelUp.add(cercaBambini);
 
@@ -492,12 +529,17 @@ public class Interface extends JPanel {
         boolean ok1;
         boolean ok2;
 
-        try {
+        try
+
+        {
             FileReader fileReader = new FileReader(new File("Data/AccountData.data"));
             fileReader.read();
             fileReader.close();
             ok1 = true;
-        } catch (Exception ex) {
+        } catch (
+                Exception ex)
+
+        {
             ex.printStackTrace();
             ok1 = false;
             SwingUtilities.invokeLater(new Runnable() {
@@ -508,7 +550,9 @@ public class Interface extends JPanel {
             });
         }
 
-        if (ok1) {
+        if (ok1)
+
+        {
             try {
                 FileReader fileReader = new FileReader(new File("Data/DBData.data"));
                 fileReader.read();
@@ -544,7 +588,10 @@ public class Interface extends JPanel {
             }
         }
 
-        for (int i = 0; i < bambini.size(); i++) {
+        for (
+                int i = 0; i < bambini.size(); i++)
+
+        {
             if (!bambini.get(i).getSettimane().equals("Non specificato"))
                 if (filtroSettimane.size() != 0) {
                     for (int k = 0; k < filtroSettimane.size(); k++)
@@ -610,14 +657,21 @@ public class Interface extends JPanel {
         filtri.add(filtroEntrataAnticipata);
         filtri.add(filtroPranzo);
 
-        filters = new JMenu("Filtri");
-        showFilters = new JMenuItem("Gestione filtri");
-        showFilters.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                FilterInterface.createAndShowGUI(Interface.this, filtri);
-            }
-        });
+        filters = new
+
+                JMenu("Filtri");
+
+        showFilters = new
+
+                JMenuItem("Gestione filtri");
+        showFilters.addActionListener(new
+
+                                              ActionListener() {
+                                                  @Override
+                                                  public void actionPerformed(ActionEvent e) {
+                                                      FilterInterface.createAndShowGUI(Interface.this, filtri);
+                                                  }
+                                              });
 
         filters.add(showPreferenze);
         filters.add(showMagliette);
@@ -634,15 +688,22 @@ public class Interface extends JPanel {
         ArrayList<String> entrataAnticipata = new ArrayList<>();
         ArrayList<String> pranzo = new ArrayList<>();
 
-        try {
+        try
+
+        {
             ObjectInputStream reader = new ObjectInputStream(new FileInputStream(
                     new File("Data/Filter.data")));
             iCheckBoxes = ((SaveArrayList) reader.readObject()).getiCheckBoxes();
-        } catch (Exception ex) {
+        } catch (
+                Exception ex)
+
+        {
             ex.printStackTrace();
         }
 
-        if (iCheckBoxes != null) {
+        if (iCheckBoxes != null)
+
+        {
             for (ICheckBox iCheckBox : iCheckBoxes)
                 switch (iCheckBox.getId().split("_")[0]) {
                     case "settimanePanel":
@@ -808,6 +869,33 @@ public class Interface extends JPanel {
         }
 
         return table;
+    }
+
+    private void saveFile(String file) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(new File("Data/Dir.data")));
+            writer.write(file);
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private String loadFile() {
+        String read = null;
+        String readAll = "";
+
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(new File("Data/Dir.data")));
+            while ((read = reader.readLine()) != null)
+                readAll += read;
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return readAll;
     }
 
     private JTable createTable(Object[][] data, String type) {

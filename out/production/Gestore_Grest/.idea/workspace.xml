@@ -7,16 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0b7477b-dd04-4417-a850-d5250fa53afa" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Data/Filter.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/show.data" beforeDir="false" afterPath="$PROJECT_DIR$/Data/show.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar.zip" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar/Gestore_Grest.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar/Gestore_Grest.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/Data/Filter.data" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/Data/Filter.data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/Data/show.data" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/Data/show.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Application/ICheckBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Application/ICheckBox.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Application/SaveArrayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Application/SaveArrayList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface$2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$10.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$11.class" afterDir="false" />
@@ -47,13 +42,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Application/ICheckBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Application/ICheckBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Application/SaveArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Application/SaveArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/FilterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/FilterInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/Interface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/lucaVezzoli/Application/ICheckBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/lucaVezzoli/Application/ICheckBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/lucaVezzoli/Application/SaveArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/lucaVezzoli/Application/SaveArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/FilterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/FilterInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -103,48 +92,8 @@
       <file leaf-file-name="Interface.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="714" column="21" lean-forward="true" selection-start-line="714" selection-start-column="21" selection-end-line="714" selection-end-column="21" />
-              <folding>
-                <element signature="e#3170#3353#0" expanded="true" />
-                <element signature="e#3352#3353#0" expanded="true" />
-                <element signature="e#3464#3645#0" expanded="true" />
-                <element signature="e#3644#3645#0" expanded="true" />
-                <element signature="e#19086#19264#0" expanded="true" />
-                <element signature="e#19263#19264#0" expanded="true" />
-                <element signature="e#29717#29872#0" expanded="true" />
-                <element signature="e#29871#29872#0" expanded="true" />
-                <element signature="e#42622#42814#0" expanded="true" />
-                <element signature="e#42813#42814#0" expanded="true" />
-                <element signature="e#51889#51890#0" expanded="true" />
-                <element signature="e#51923#51924#0" expanded="true" />
-                <element signature="e#51968#51969#0" expanded="true" />
-                <element signature="e#51995#51996#0" expanded="true" />
-                <element signature="e#52036#52037#0" expanded="true" />
-                <element signature="e#52073#52074#0" expanded="true" />
-                <element signature="e#52112#52113#0" expanded="true" />
-                <element signature="e#52147#52148#0" expanded="true" />
-                <element signature="e#52192#52193#0" expanded="true" />
-                <element signature="e#52227#52228#0" expanded="true" />
-                <element signature="e#52268#52269#0" expanded="true" />
-                <element signature="e#52301#52302#0" expanded="true" />
-                <element signature="e#52333#52334#0" expanded="true" />
-                <element signature="e#52361#52362#0" expanded="true" />
-                <element signature="e#52396#52397#0" expanded="true" />
-                <element signature="e#52426#52427#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBConnection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/DBConnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
-              <folding>
-                <element signature="e#1064#1065#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="191">
+              <caret line="293" column="31" selection-start-line="293" selection-start-column="31" selection-end-line="293" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -160,17 +109,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>anima</find>
-      <find>animatori</find>
-      <find>alwa</find>
-      <find>stampa</find>
-      <find>70</find>
-      <find>3</find>
-      <find>4</find>
-      <find>N (</find>
-      <find>setWidth</find>
-      <find>animatore</find>
-      <find>showP</find>
       <find>indexNome</find>
       <find>indexCognome</find>
       <find>StartProgramInterface.createAndShowGUI();</find>
@@ -190,6 +128,17 @@
       <find>AndShow</find>
       <find>&quot;</find>
       <find>Panel</find>
+      <find>len</find>
+      <find>.toArray</find>
+      <find>Set</find>
+      <find>Sort</find>
+      <find>toCsv</find>
+      <find>create</find>
+      <find>File.se</find>
+      <find>new Fil</find>
+      <find>tocsv</find>
+      <find>directory</find>
+      <find>toc</find>
     </findStrings>
     <replaceStrings>
       <replace>giganti</replace>
@@ -307,6 +256,22 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Gestore_Grest" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Gestore_Grest" type="616d4139:PackageViewModuleNode" />
+            </path>
+            <path>
+              <item name="Gestore_Grest" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Gestore_Grest" type="616d4139:PackageViewModuleNode" />
+              <item name="it.lucaVezzoli" type="1f31426a:PackageElementNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -343,22 +308,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lucaVezzoli" type="462c0819:PsiDirectoryNode" />
               <item name="Interface" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Gestore_Grest" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Gestore_Grest" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="Gestore_Grest" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Gestore_Grest" type="616d4139:PackageViewModuleNode" />
-              <item name="it.lucaVezzoli" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -759,19 +708,24 @@
       <workItem from="1526567460973" duration="2905000" />
       <workItem from="1526623621770" duration="677000" />
       <workItem from="1526638315354" duration="2667000" />
+      <workItem from="1526641822264" duration="1421000" />
+      <workItem from="1526672466775" duration="50000" />
+      <workItem from="1526705343913" duration="1309000" />
+      <workItem from="1526706716422" duration="661000" />
+      <workItem from="1526707379643" duration="312000" />
+      <workItem from="1526718568667" duration="465000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278953000" />
+    <option name="totallyTimeSpent" value="283171000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="732" extended-state="7" />
+    <frame x="0" y="0" width="1366" height="732" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3141946" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -779,8 +733,8 @@
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.36363637" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.26794258" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36363637" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.26751593" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20424597" />
@@ -798,6 +752,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32970452" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3141946" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -808,7 +763,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="856" />
+      <option name="time" value="866" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -816,14 +771,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../Setup/jdk1.8.0_161/src.zip!/java/awt/GraphicsEnvironment.java" />
     <entry file="jar://$PROJECT_DIR$/../../../../Setup/jdk1.8.0_161/src.zip!/java/awt/print/PrinterJob.java" />
     <entry file="jar://$PROJECT_DIR$/../../../../Setup/jdk1.8.0_161/src.zip!/javax/swing/JTable.java" />
     <entry file="jar://$USER_HOME$/Librerie Java/mysql-connector-java-5.1.45-bin.jar!/com/mysql/jdbc/Util.class" />
@@ -966,16 +913,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/EntryPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/GestioneAccount.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1052,10 +989,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding>
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1063,28 +996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-15">
           <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#635#636#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/FilterInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-103">
-          <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/DBConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-          <folding>
-            <element signature="e#1064#1065#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1092,9 +1003,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="65">
           <caret line="674" selection-start-line="674" selection-end-line="674" />
-          <folding>
-            <element signature="e#30777#30778#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1102,15 +1010,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="47">
           <caret line="2164" selection-start-line="2164" selection-end-line="2164" />
-          <folding>
-            <element signature="e#81939#81940#0" expanded="true" />
-            <element signature="e#82007#82008#0" expanded="true" />
-            <element signature="e#85833#85834#0" expanded="true" />
-            <element signature="e#85889#85890#0" expanded="true" />
-            <element signature="e#127044#127045#0" expanded="true" />
-            <element signature="e#160439#160440#0" expanded="true" />
-            <element signature="e#160497#160498#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1118,18 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="47">
           <caret line="1581" selection-start-line="1581" selection-end-line="1581" />
-          <folding>
-            <element signature="e#7901#7902#0" expanded="true" />
-            <element signature="e#7981#7982#0" expanded="true" />
-            <element signature="e#8181#8182#0" expanded="true" />
-            <element signature="e#8219#8220#0" expanded="true" />
-            <element signature="e#82509#82510#0" expanded="true" />
-            <element signature="e#82549#82550#0" expanded="true" />
-            <element signature="e#103191#103192#0" expanded="true" />
-            <element signature="e#103227#103228#0" expanded="true" />
-            <element signature="e#164484#164485#0" expanded="true" />
-            <element signature="e#164532#164533#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1140,38 +1027,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/EntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/DBConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/FilterInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="175" column="22" selection-start-line="175" selection-start-column="22" selection-end-line="175" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/jdk1.7.0_80/src.zip!/javax/swing/JFileChooser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="738" column="33" lean-forward="true" selection-start-line="738" selection-start-column="33" selection-end-line="738" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/jdk1.7.0_80/src.zip!/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="148" column="13" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="714" column="21" lean-forward="true" selection-start-line="714" selection-start-column="21" selection-end-line="714" selection-end-column="21" />
-          <folding>
-            <element signature="e#3170#3353#0" expanded="true" />
-            <element signature="e#3352#3353#0" expanded="true" />
-            <element signature="e#3464#3645#0" expanded="true" />
-            <element signature="e#3644#3645#0" expanded="true" />
-            <element signature="e#19086#19264#0" expanded="true" />
-            <element signature="e#19263#19264#0" expanded="true" />
-            <element signature="e#29717#29872#0" expanded="true" />
-            <element signature="e#29871#29872#0" expanded="true" />
-            <element signature="e#42622#42814#0" expanded="true" />
-            <element signature="e#42813#42814#0" expanded="true" />
-            <element signature="e#51889#51890#0" expanded="true" />
-            <element signature="e#51923#51924#0" expanded="true" />
-            <element signature="e#51968#51969#0" expanded="true" />
-            <element signature="e#51995#51996#0" expanded="true" />
-            <element signature="e#52036#52037#0" expanded="true" />
-            <element signature="e#52073#52074#0" expanded="true" />
-            <element signature="e#52112#52113#0" expanded="true" />
-            <element signature="e#52147#52148#0" expanded="true" />
-            <element signature="e#52192#52193#0" expanded="true" />
-            <element signature="e#52227#52228#0" expanded="true" />
-            <element signature="e#52268#52269#0" expanded="true" />
-            <element signature="e#52301#52302#0" expanded="true" />
-            <element signature="e#52333#52334#0" expanded="true" />
-            <element signature="e#52361#52362#0" expanded="true" />
-            <element signature="e#52396#52397#0" expanded="true" />
-            <element signature="e#52426#52427#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="191">
+          <caret line="293" column="31" selection-start-line="293" selection-start-column="31" selection-end-line="293" selection-end-column="31" />
         </state>
       </provider>
     </entry>
