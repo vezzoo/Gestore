@@ -54,6 +54,7 @@ public class AddBambinoInterface {
     private JRadioButton pagamento_nsJRB;
     private JRadioButton pagamento_accontoJRB;
     private JRadioButton pagamento_saldoJRB;
+    private JRadioButton pagamento_caritasJRB;
     private JRadioButton ea_nsJRB;
     private JRadioButton ea_noJRB;
     private JRadioButton ea_siJRB;
@@ -96,6 +97,7 @@ public class AddBambinoInterface {
 
         pagamentoGroup.add(pagamento_saldoJRB);
         pagamentoGroup.add(pagamento_accontoJRB);
+        pagamentoGroup.add(pagamento_caritasJRB);
         pagamentoGroup.add(pagamento_nsJRB);
 
         eaGroup.add(ea_siJRB);
@@ -209,6 +211,9 @@ public class AddBambinoInterface {
                     }
 
                     switch (bambino.getPagamento()) {
+                        case "Caritas":
+                            pagamento_caritasJRB.setSelected(true);
+                            break;
                         case "Acconto":
                             pagamento_accontoJRB.setSelected(true);
                             break;

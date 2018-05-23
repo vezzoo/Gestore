@@ -1,6 +1,8 @@
 package it.lucaVezzoli.Interface;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import it.lucaVezzoli.Application.*;
+import sun.plugin.com.AmbientProperty;
 
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
@@ -32,7 +34,12 @@ public class Interface extends JPanel {
     private JMenu filters;
     private JMenuItem connettivita;
     private JMenuItem gestioneAccount;
-    private JMenuItem showFilters;
+    private JMenuItem filtriAttivi;
+    private JLabel filtriAnimatoriAttivi;
+    private JLabel filtriBambiniAttivi;
+    private JMenu showFilters;
+    private JMenuItem animatoriShowFilters;
+    private JMenuItem bambiniShowFilters;
     private JCheckBoxMenuItem showPreferenze;
     private JCheckBoxMenuItem showMagliette;
     private JCheckBoxMenuItem showTaglia;
@@ -63,6 +70,7 @@ public class Interface extends JPanel {
     private JButton stampaAnimatori;
     private JButton stampaBambini;
     private ArrayList<ArrayList<String>> filtri = new ArrayList<>();
+    private ArrayList<ArrayList<String>> filtriAnimatori = new ArrayList<>();
     private ArrayList<String> filtroSettimane = new ArrayList<>();
     private ArrayList<String> filtroTaglia = new ArrayList<>();
     private ArrayList<String> filtroPitStop = new ArrayList<>();
@@ -70,6 +78,13 @@ public class Interface extends JPanel {
     private ArrayList<String> filtroPagamento = new ArrayList<>();
     private ArrayList<String> filtroEntrataAnticipata = new ArrayList<>();
     private ArrayList<String> filtroPranzo = new ArrayList<>();
+    private ArrayList<String> filtrogrest = new ArrayList<>();
+    private ArrayList<String> filtrominigrest = new ArrayList<>();
+    private ArrayList<String> filtrocampoADO = new ArrayList<>();
+    private ArrayList<String> filtroPit_Stop = new ArrayList<>();
+    private ArrayList<String> filtroslpa = new ArrayList<>();
+    private ArrayList<String> filtrosl = new ArrayList<>();
+    private ArrayList<String> filtroResponsabile = new ArrayList<>();
     private StartProgramInterface startProgramInterface;
     private int indexCognome = 1;
     private int indexNome = 2;
@@ -588,10 +603,7 @@ public class Interface extends JPanel {
             }
         }
 
-        for (
-                int i = 0; i < bambini.size(); i++)
-
-        {
+        for (int i = 0; i < bambini.size(); i++) {
             if (!bambini.get(i).getSettimane().equals("Non specificato"))
                 if (filtroSettimane.size() != 0) {
                     for (int k = 0; k < filtroSettimane.size(); k++)
@@ -657,21 +669,28 @@ public class Interface extends JPanel {
         filtri.add(filtroEntrataAnticipata);
         filtri.add(filtroPranzo);
 
-        filters = new
+        filters = new JMenu("Filtri");
 
-                JMenu("Filtri");
+        showFilters = new JMenu("Gestione filtri");
 
-        showFilters = new
+        animatoriShowFilters = new JMenuItem("Animatori");
+        animatoriShowFilters.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FilterInterface.createAndShowGUI(Interface.this, filtriAnimatori, "Animatori");
+            }
+        });
 
-                JMenuItem("Gestione filtri");
-        showFilters.addActionListener(new
+        bambiniShowFilters = new JMenuItem("Bambini");
+        bambiniShowFilters.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FilterInterface.createAndShowGUI(Interface.this, filtri, "Bambini");
+            }
+        });
 
-                                              ActionListener() {
-                                                  @Override
-                                                  public void actionPerformed(ActionEvent e) {
-                                                      FilterInterface.createAndShowGUI(Interface.this, filtri);
-                                                  }
-                                              });
+        showFilters.add(animatoriShowFilters);
+        showFilters.add(bambiniShowFilters);
 
         filters.add(showPreferenze);
         filters.add(showMagliette);
@@ -688,22 +707,15 @@ public class Interface extends JPanel {
         ArrayList<String> entrataAnticipata = new ArrayList<>();
         ArrayList<String> pranzo = new ArrayList<>();
 
-        try
-
-        {
+        try {
             ObjectInputStream reader = new ObjectInputStream(new FileInputStream(
-                    new File("Data/Filter.data")));
+                    new File("Data/FilterBambini.data")));
             iCheckBoxes = ((SaveArrayList) reader.readObject()).getiCheckBoxes();
-        } catch (
-                Exception ex)
-
-        {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
 
-        if (iCheckBoxes != null)
-
-        {
+        if (iCheckBoxes != null) {
             for (ICheckBox iCheckBox : iCheckBoxes)
                 switch (iCheckBox.getId().split("_")[0]) {
                     case "settimanePanel":
@@ -729,34 +741,55 @@ public class Interface extends JPanel {
                         break;
                 }
 
+            boolean[] okB = new boolean[7];
+
             if (!(settimane.size() == 0 && taglia.size() == 0 && maglietta.size() == 0 &&
                     pitStop.size() == 0 && pagamento.size() == 0 && entrataAnticipata.size() == 0 &&
                     pranzo.size() == 0)) {
 
-                Set<Bambino> bambiniFiltrati = new HashSet<Bambino>();
+                Set<Bambino> bambiniFiltrati = new HashSet<>();
 
                 for (Bambino bambino : bambini) {
+                    okB = resetOk(okB);
+
                     for (String settimana : settimane)
                         if (bambino.getSettimane().equals(settimana))
-                            bambiniFiltrati.add(bambino);
+                            okB[0] = true;
+                    if (settimane.size() == 0)
+                        okB[0] = true;
                     for (String taglia1 : taglia)
                         if (bambino.getTaglia().equals(taglia1))
-                            bambiniFiltrati.add(bambino);
+                            okB[1] = true;
+                    if (taglia.size() == 0)
+                        okB[1] = true;
                     for (String maglia : maglietta)
                         if (bambino.getMaglietta().equals(maglia))
-                            bambiniFiltrati.add(bambino);
+                            okB[2] = true;
+                    if (maglietta.size() == 0)
+                        okB[2] = true;
                     for (String pit : pitStop)
                         if (bambino.isPit_stop().equals(pit))
-                            bambiniFiltrati.add(bambino);
+                            okB[3] = true;
+                    if (pitStop.size() == 0)
+                        okB[3] = true;
                     for (String pag : pagamento)
                         if (bambino.getPagamento().equals(pag))
-                            bambiniFiltrati.add(bambino);
+                            okB[4] = true;
+                    if (pagamento.size() == 0)
+                        okB[4] = true;
                     for (String ea : entrataAnticipata)
                         if (bambino.isEntrataAnticipata().equals(ea))
-                            bambiniFiltrati.add(bambino);
+                            okB[5] = true;
+                    if (entrataAnticipata.size() == 0)
+                        okB[5] = true;
                     for (String pra : pranzo)
                         if (bambino.isPranzo().equals(pra))
-                            bambiniFiltrati.add(bambino);
+                            okB[6] = true;
+                    if (pranzo.size() == 0)
+                        okB[6] = true;
+
+                    if (checkOk(okB))
+                        bambiniFiltrati.add(bambino);
                 }
 
                 int lenCol = 5;
@@ -840,6 +873,295 @@ public class Interface extends JPanel {
                     bambini.add(bambino);
             }
         }
+
+        for (int i = 0; i < animatori.size(); i++) {
+            if (filtroResponsabile.size() != 0) {
+                for (int k = 0; k < filtroResponsabile.size(); k++)
+                    if (!filtroResponsabile.get(k).equals(Boolean.toString(animatori.get(i).getResponsabile())))
+                        filtroResponsabile.add(Boolean.toString(animatori.get(i).getResponsabile()));
+            } else
+                filtroResponsabile.add(Boolean.toString(animatori.get(i).getResponsabile()));
+
+            if (filtrogrest.size() != 0) {
+                for (int k = 0; k < filtrogrest.size(); k++)
+                    for (AnimazioneEstiva animazioneEstiva : animatori.get(i).getAnimazioneEstiva())
+                        if (animazioneEstiva.getNomeAttivita().equals("Grest") &&
+                                !animazioneEstiva.getPartecipazione().equals("Non specificato") &&
+                                !animazioneEstiva.getPartecipazione().equals(filtrogrest.get(k)))
+                            filtrogrest.add(animazioneEstiva.getPartecipazione());
+            } else {
+                for (AnimazioneEstiva animazioneEstiva : animatori.get(i).getAnimazioneEstiva())
+                    if (animazioneEstiva.getNomeAttivita().equals("Grest") &&
+                            !animazioneEstiva.getPartecipazione().equals("Non specificato"))
+                        filtrogrest.add(animazioneEstiva.getPartecipazione());
+            }
+
+            if (filtrominigrest.size() != 0) {
+                for (int k = 0; k < filtrominigrest.size(); k++)
+                    for (AnimazioneEstiva animazioneEstiva : animatori.get(i).getAnimazioneEstiva())
+                        if (animazioneEstiva.getNomeAttivita().equals("MiniGrest") &&
+                                !animazioneEstiva.getPartecipazione().equals("Non specificato") &&
+                                !animazioneEstiva.getPartecipazione().equals(filtrominigrest.get(k)))
+                            filtrominigrest.add(animazioneEstiva.getPartecipazione());
+            } else {
+                for (AnimazioneEstiva animazioneEstiva : animatori.get(i).getAnimazioneEstiva())
+                    if (animazioneEstiva.getNomeAttivita().equals("MiniGrest") &&
+                            !animazioneEstiva.getPartecipazione().equals("Non specificato"))
+                        filtrominigrest.add(animazioneEstiva.getPartecipazione());
+            }
+
+            if (filtrocampoADO.size() != 0) {
+                for (int k = 0; k < filtrocampoADO.size(); k++)
+                    for (AnimazioneEstiva animazioneEstiva : animatori.get(i).getAnimazioneEstiva())
+                        if (animazioneEstiva.getNomeAttivita().equals("CampoADO") &&
+                                !animazioneEstiva.getPartecipazione().equals("Non specificato") &&
+                                !animazioneEstiva.getPartecipazione().equals(filtrocampoADO.get(k)))
+                            filtrocampoADO.add(animazioneEstiva.getPartecipazione());
+            } else {
+                for (AnimazioneEstiva animazioneEstiva : animatori.get(i).getAnimazioneEstiva())
+                    if (animazioneEstiva.getNomeAttivita().equals("CampoADO") &&
+                            !animazioneEstiva.getPartecipazione().equals("Non specificato"))
+                        filtrocampoADO.add(animazioneEstiva.getPartecipazione());
+            }
+
+            if (filtroPit_Stop.size() != 0) {
+                for (int k = 0; k < filtroPit_Stop.size(); k++)
+                    for (AnimazioneEstiva animazioneEstiva : animatori.get(i).getAnimazioneEstiva())
+                        if (animazioneEstiva.getNomeAttivita().equals("PitStop") &&
+                                !animazioneEstiva.getPartecipazione().equals("Non specificato") &&
+                                !animazioneEstiva.getPartecipazione().equals(filtroPit_Stop.get(k)))
+                            filtroPit_Stop.add(animazioneEstiva.getPartecipazione());
+            } else {
+                for (AnimazioneEstiva animazioneEstiva : animatori.get(i).getAnimazioneEstiva())
+                    if (animazioneEstiva.getNomeAttivita().equals("PitStop") &&
+                            !animazioneEstiva.getPartecipazione().equals("Non specificato"))
+                        filtroPit_Stop.add(animazioneEstiva.getPartecipazione());
+            }
+
+            if (filtroslpa.size() != 0) {
+                for (int k = 0; k < filtroslpa.size(); k++)
+                    for (AnimazioneEstiva animazioneEstiva : animatori.get(i).getAnimazioneEstiva())
+                        if (animazioneEstiva.getNomeAttivita().equals("SanLuigiPreADO") &&
+                                !animazioneEstiva.getPartecipazione().equals("Non specificato") &&
+                                !animazioneEstiva.getPartecipazione().equals(filtroslpa.get(k)))
+                            filtroslpa.add(animazioneEstiva.getPartecipazione());
+            } else {
+                for (AnimazioneEstiva animazioneEstiva : animatori.get(i).getAnimazioneEstiva())
+                    if (animazioneEstiva.getNomeAttivita().equals("SanLuigiPreADO") &&
+                            !animazioneEstiva.getPartecipazione().equals("Non specificato"))
+                        filtroslpa.add(animazioneEstiva.getPartecipazione());
+            }
+
+            if (filtrosl.size() != 0) {
+                for (int k = 0; k < filtrosl.size(); k++)
+                    for (AnimazioneEstiva animazioneEstiva : animatori.get(i).getAnimazioneEstiva())
+                        if (animazioneEstiva.getNomeAttivita().equals("SanLuigi") &&
+                                !animazioneEstiva.getPartecipazione().equals("Non specificato") &&
+                                !animazioneEstiva.getPartecipazione().equals(filtrosl.get(k)))
+                            filtrosl.add(animazioneEstiva.getPartecipazione());
+            } else {
+                for (AnimazioneEstiva animazioneEstiva : animatori.get(i).getAnimazioneEstiva())
+                    if (animazioneEstiva.getNomeAttivita().equals("SanLuigi") &&
+                            !animazioneEstiva.getPartecipazione().equals("Non specificato"))
+                        filtrosl.add(animazioneEstiva.getPartecipazione());
+            }
+        }
+
+        filtriAnimatori.add(filtroResponsabile);
+        filtriAnimatori.add(filtrogrest);
+        filtriAnimatori.add(filtrominigrest);
+        filtriAnimatori.add(filtrocampoADO);
+        filtriAnimatori.add(filtroPit_Stop);
+        filtriAnimatori.add(filtroslpa);
+        filtriAnimatori.add(filtrosl);
+
+        Set<ICheckBox> iCheckBoxesAnimatori = null;
+        ArrayList<String> responsabile = new ArrayList<>();
+        ArrayList<String> grest = new ArrayList<>();
+        ArrayList<String> minigrest = new ArrayList<>();
+        ArrayList<String> campoADO = new ArrayList<>();
+        ArrayList<String> pit_stop = new ArrayList<>();
+        ArrayList<String> slpa = new ArrayList<>();
+        ArrayList<String> sl = new ArrayList<>();
+
+        try {
+            ObjectInputStream reader = new ObjectInputStream(new FileInputStream(
+                    new File("Data/FilterAnimatori.data")));
+            iCheckBoxesAnimatori = ((SaveArrayList) reader.readObject()).getiCheckBoxes();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        if (iCheckBoxesAnimatori != null) {
+            for (ICheckBox iCheckBox : iCheckBoxesAnimatori)
+                switch (iCheckBox.getId().split("_")[0]) {
+                    case "responsabilePanel":
+                        responsabile.add(iCheckBox.getId().split("_")[1]);
+                        break;
+                    case "grestPanel":
+                        grest.add(iCheckBox.getId().split("_")[1]);
+                        break;
+                    case "minigrestPanel":
+                        minigrest.add(iCheckBox.getId().split("_")[1]);
+                        break;
+                    case "campoAdoPanel":
+                        campoADO.add(iCheckBox.getId().split("_")[1]);
+                        break;
+                    case "pit-stopPanel":
+                        pit_stop.add(iCheckBox.getId().split("_")[1]);
+                        break;
+                    case "slpaPanel":
+                        slpa.add(iCheckBox.getId().split("_")[1]);
+                        break;
+                    case "slPanel":
+                        sl.add(iCheckBox.getId().split("_")[1]);
+                        break;
+                }
+
+            boolean[] ok = new boolean[7];
+
+            if (!(responsabile.size() == 0 && grest.size() == 0 && minigrest.size() == 0 &&
+                    campoADO.size() == 0 && pit_stop.size() == 0 && slpa.size() == 0 && sl.size() == 0)) {
+
+                Set<Animatore> animatoriFiltrati = new HashSet<>();
+
+                for (Animatore animatore : animatori) {
+                    ok = resetOk(ok);
+
+                    for (String res : responsabile)
+                        if (res.replace("Sì", "true").replace("No", "false")
+                                .equals(Boolean.toString(animatore.getResponsabile())))
+                            ok[0] = true;
+                    if (responsabile.size() == 0)
+                        ok[0] = true;
+                    for (String gre : grest)
+                        for (AnimazioneEstiva animazioneEstiva : animatore.getAnimazioneEstiva())
+                            if (animazioneEstiva.getNomeAttivita().equals("Grest"))
+                                if (gre.equals(animazioneEstiva.getPartecipazione()))
+                                    ok[1] = true;
+                    if (grest.size() == 0)
+                        ok[1] = true;
+                    for (String gre : minigrest)
+                        for (AnimazioneEstiva animazioneEstiva : animatore.getAnimazioneEstiva())
+                            if (animazioneEstiva.getNomeAttivita().equals("MiniGrest"))
+                                if (gre.equals(animazioneEstiva.getPartecipazione()))
+                                    ok[2] = true;
+                    if (minigrest.size() == 0)
+                        ok[2] = true;
+                    for (String gre : campoADO)
+                        for (AnimazioneEstiva animazioneEstiva : animatore.getAnimazioneEstiva())
+                            if (animazioneEstiva.getNomeAttivita().equals("CampoADO"))
+                                if (gre.equals(animazioneEstiva.getPartecipazione()))
+                                    ok[3] = true;
+                    if (campoADO.size() == 0)
+                        ok[3] = true;
+                    for (String gre : pit_stop)
+                        for (AnimazioneEstiva animazioneEstiva : animatore.getAnimazioneEstiva())
+                            if (animazioneEstiva.getNomeAttivita().equals("PitStop"))
+                                if (gre.equals(animazioneEstiva.getPartecipazione()))
+                                    ok[4] = true;
+                    if (pit_stop.size() == 0)
+                        ok[4] = true;
+                    for (String gre : slpa)
+                        for (AnimazioneEstiva animazioneEstiva : animatore.getAnimazioneEstiva())
+                            if (animazioneEstiva.getNomeAttivita().equals("SanLuigiPreADO"))
+                                if (gre.equals(animazioneEstiva.getPartecipazione()))
+                                    ok[5] = true;
+                    if (slpa.size() == 0)
+                        ok[5] = true;
+                    for (String gre : sl)
+                        for (AnimazioneEstiva animazioneEstiva : animatore.getAnimazioneEstiva())
+                            if (animazioneEstiva.getNomeAttivita().equals("SanLuigi"))
+                                if (gre.equals(animazioneEstiva.getPartecipazione()))
+                                    ok[6] = true;
+                    if (sl.size() == 0)
+                        ok[6] = true;
+
+                    if (checkOk(ok))
+                        animatoriFiltrati.add(animatore);
+                }
+
+                Object[][] data = new Object[animatoriFiltrati.size()][5];
+
+                int i = 0;
+
+                for (Animatore animatore : animatoriFiltrati) {
+                    data[i][indexCognome] = "   " + animatore.getCognome();
+                    data[i][indexNome] = "   " + animatore.getNome();
+                    data[i][indexAnno] = "   " + animatore.getAnno();
+                    data[i][4] = "   (" + animatore.getId() + ")";
+                    data[i][0] = ++i;
+                }
+
+                Object[] array = new Object[data.length];
+
+                for (int d = 0; d < array.length; d++)
+                    array[d] = data[d][indexCognome];
+
+                Arrays.sort(array, 0, array.length);
+                Object[] sup;
+                Animatore bambinoSup1;
+                Animatore bambinoSup2;
+
+                for (int e = 0; e < array.length; e++) {
+                    for (int k = e; k < data.length; k++) {
+                        if (array[e].equals(data[k][indexCognome])) {
+                            sup = data[k];
+                            data[k] = data[e];
+                            data[e] = sup;
+
+                            bambinoSup1 = animatori.get(k);
+                            bambinoSup2 = animatori.get(e);
+                            animatori.remove(k);
+                            animatori.add(k, bambinoSup2);
+                            animatori.remove(e);
+                            animatori.add(e, bambinoSup1);
+                        }
+                    }
+                }
+
+                for (int f = 0; f < data.length; f++)
+                    data[f][0] = f + 1;
+
+                createAndShowTable(data, tableAnimatori);
+
+                animatori.clear();
+
+                for (Animatore animatore : animatoriFiltrati)
+                    animatori.add(animatore);
+            }
+        }
+
+
+        ImageIcon statusIconAnimatori = new ImageIcon((iCheckBoxesAnimatori.size() != 0) ? "Data/quadrato_verde.png" : "Data/quadrato_rosso.png");
+        ImageIcon statusIconBambini = new ImageIcon((iCheckBoxes.size() != 0) ? "Data/quadrato_verde.png" : "Data/quadrato_rosso.png");
+
+        filtriAnimatoriAttivi = new JLabel("Filtri animatori   ");
+        filtriAnimatoriAttivi.setIcon(statusIconAnimatori);
+        filtriBambiniAttivi = new JLabel("Filtri bambini   ");
+        filtriBambiniAttivi.setIcon(statusIconBambini);
+
+        filtriAttivi = new JMenu("Stato filtri");
+
+        menuBar.add(filtriAnimatoriAttivi);
+        menuBar.add(filtriBambiniAttivi);
+    }
+
+    private boolean[] resetOk(boolean[] ok) {
+        boolean[] okReturn = new boolean[ok.length];
+
+        for (int i = 0; i < okReturn.length; i++)
+            okReturn[i] = false;
+
+        return okReturn;
+    }
+
+    private boolean checkOk(boolean[] ok) {
+        for (boolean type : ok)
+            if (!type)
+                return false;
+
+        return true;
     }
 
     public JTable loadData(String type) {

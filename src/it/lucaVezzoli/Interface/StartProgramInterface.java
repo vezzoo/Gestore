@@ -55,15 +55,20 @@ public class StartProgramInterface {
 
         statusJTA.setText("Avvio terminato");
 
-        SwingUtilities.invokeLater(new Runnable() {
+        new Thread(new Runnable() {
             @Override
             public void run() {
-                if (connection != null || tryToRead) {
-                    Interface.createAndShowGUI(connection, dbConnection, account,
-                            StartProgramInterface.this);
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (connection != null || tryToRead) {
+                            Interface.createAndShowGUI(connection, dbConnection, account,
+                                    StartProgramInterface.this);
 
-                    frame.dispose();
-                }
+                            frame.dispose();
+                        }
+                    }
+                });
             }
         });
     }

@@ -7,11 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0b7477b-dd04-4417-a850-d5250fa53afa" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/Data/FilterAnimatori.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/show.data" beforeDir="false" afterPath="$PROJECT_DIR$/Data/show.data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar.zip" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar/Data/AccountData.data" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar/Data/AccountData.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar/Data/Filter.data" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar/Gestore_Grest.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar/Gestore_Grest.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/Data/Filter.data" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/Data/Filter.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/Data/Filter.data" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/Data/show.data" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/Data/show.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$10.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$11.class" afterDir="false" />
@@ -42,7 +54,13 @@
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/AddBambinoInterface.form" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/AddBambinoInterface.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/AddBambinoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/AddBambinoInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/FilterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/FilterInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/Interface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/FilterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/FilterInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -92,8 +110,8 @@
       <file leaf-file-name="Interface.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="293" column="31" selection-start-line="293" selection-start-column="31" selection-end-line="293" selection-end-column="31" />
+            <state relative-caret-position="245">
+              <caret line="1146" column="41" selection-start-line="1146" selection-start-column="41" selection-end-line="1146" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -109,68 +127,68 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>indexNome</find>
-      <find>indexCognome</find>
-      <find>StartProgramInterface.createAndShowGUI();</find>
-      <find>StartProgramInterface.createAndShowGUI(0);</find>
-      <find>getDocum</find>
-      <find>account</find>
-      <find>showPre</find>
-      <find>showPreferenze</find>
-      <find>mostra taglia</find>
-      <find>Taglie</find>
-      <find>Tagli</find>
-      <find>Taglia</find>
-      <find>load</find>
-      <find>tableTO</find>
-      <find>Syste</find>
-      <find>List</find>
-      <find>AndShow</find>
-      <find>&quot;</find>
-      <find>Panel</find>
-      <find>len</find>
-      <find>.toArray</find>
-      <find>Set</find>
-      <find>Sort</find>
-      <find>toCsv</find>
-      <find>create</find>
-      <find>File.se</find>
-      <find>new Fil</find>
-      <find>tocsv</find>
-      <find>directory</find>
-      <find>toc</find>
+      <find>iCheckBoxes</find>
+      <find>Data/Filter</find>
+      <find>bambiniFiltrati</find>
+      <find>bambino</find>
+      <find>incontriABC</find>
+      <find>bambini</find>
+      <find>filtri</find>
+      <find>IncontriABC</find>
+      <find>filtroSettimane</find>
+      <find>sl</find>
+      <find>e</find>
+      <find>== 0</find>
+      <find>filtroIncontriABC</find>
+      <find>Integer.toString(animatori.get(i).getAbc_incontri_partecipato())</find>
+      <find>filtroRepson</find>
+      <find>ArrayList&lt;String&gt;</find>
+      <find>ArrayList</find>
+      <find>.get(</find>
+      <find>.get(k</find>
+      <find>).e</find>
+      <find>).eqa</find>
+      <find>).equals(b</find>
+      <find>size()</find>
+      <find>.get(i)</find>
+      <find>grest</find>
+      <find>\</find>
+      <find>Grest</find>
+      <find>animatoriFiltrati.add(animatore);</find>
+      <find>new File</find>
+      <find>? :</find>
     </findStrings>
     <replaceStrings>
+      <replace>animazione</replace>
       <replace>giganti</replace>
       <replace>giochi</replace>
-      <replace>festafinale</replace>
+      <replace>ff</replace>
       <replace>preghiera</replace>
       <replace>scenografia</replace>
       <replace>segreteria</replace>
-      <replace>storia</replace>
-      <replace>miniGrest</replace>
-      <replace>ca</replace>
-      <replace>ps</replace>
+      <replace>filtroIncontriABC</replace>
+      <replace>filtroResponsabile</replace>
+      <replace>Boolean.toString(animatori.get(i).getResponsabile())</replace>
+      <replace>Set</replace>
+      <replace>HashSet</replace>
+      <replace>A[</replace>
+      <replace>A[k</replace>
+      <replace>].equals(b</replace>
+      <replace>lenght</replace>
+      <replace>length</replace>
+      <replace>[i]</replace>
+      <replace>minigrest</replace>
+      <replace>campoADO</replace>
+      <replace>pit_stop</replace>
+      <replace>Pit_stop</replace>
+      <replace>Pit_Stop</replace>
       <replace>slpa</replace>
       <replace>sl</replace>
-      <replace>new ImageIcon(&quot;Data/printer-tool32.png&quot;);</replace>
-      <replace>Non specificato</replace>
-      <replace>Bambini</replace>
-      <replace>&quot;</replace>
-      <replace>table</replace>
-      <replace>interfaccia</replace>
-      <replace>arrayList</replace>
-      <replace>bambini</replace>
-      <replace>B</replace>
-      <replace>getConnection</replace>
-      <replace>80</replace>
-      <replace>setPreferredWidth</replace>
-      <replace>bambino</replace>
-      <replace>showMaglia</replace>
-      <replace>showMagliette</replace>
-      <replace>showTaglie</replace>
-      <replace>Set</replace>
-      <replace>Panel.getName()</replace>
+      <replace>MiniGrest</replace>
+      <replace>CampoADO</replace>
+      <replace>PitStop</replace>
+      <replace>SanLuigiPreADO</replace>
+      <replace>SanLuigi</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -179,7 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/PopupMenu_vs2.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Application/DataPersonalizzata.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.form" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/RicercaInterface.form" />
@@ -206,7 +223,6 @@
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/ConfirmInterface.form" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/PrintInterface.form" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddInterface.form" />
-        <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.form" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/ShowBambinoInterface.form" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/ShowInterface.form" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Application/Bambino.java" />
@@ -224,12 +240,14 @@
         <option value="$PROJECT_DIR$/Data/show.data" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Application/SaveShow.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddInterface.java" />
-        <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Application/Animatore.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Application/ICheckBox.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Application/SaveArrayList.java" />
+        <option value="$PROJECT_DIR$/Data/FilterAnimatori.data" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/FilterInterface.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java" />
+        <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.java" />
+        <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.form" />
       </list>
     </option>
   </component>
@@ -255,23 +273,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Gestore_Grest" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Gestore_Grest" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="Gestore_Grest" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Gestore_Grest" type="616d4139:PackageViewModuleNode" />
-              <item name="it.lucaVezzoli" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -300,14 +301,24 @@
               <item name="Gestore_Grest" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lucaVezzoli" type="462c0819:PsiDirectoryNode" />
-              <item name="Application" type="462c0819:PsiDirectoryNode" />
+              <item name="Interface" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Gestore_Grest" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Gestore_Grest" type="616d4139:PackageViewModuleNode" />
             </path>
             <path>
-              <item name="Gestore_Grest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gestore_Grest" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="lucaVezzoli" type="462c0819:PsiDirectoryNode" />
-              <item name="Interface" type="462c0819:PsiDirectoryNode" />
+              <item name="Gestore_Grest" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Gestore_Grest" type="616d4139:PackageViewModuleNode" />
+              <item name="it.lucaVezzoli" type="1f31426a:PackageElementNode" />
             </path>
           </expand>
           <select />
@@ -365,13 +376,14 @@
     <property name="settings.editor.selected.configurable" value="project.propGUI" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="it.lucaVezzoli.Application" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Data" />
       <recent name="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar/Data" />
       <recent name="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar" />
       <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="it.lucaVezzoli.Application" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -713,12 +725,19 @@
       <workItem from="1526705343913" duration="1309000" />
       <workItem from="1526706716422" duration="661000" />
       <workItem from="1526707379643" duration="312000" />
-      <workItem from="1526718568667" duration="465000" />
+      <workItem from="1526718568667" duration="5001000" />
+      <workItem from="1526833803950" duration="218000" />
+      <workItem from="1526834026074" duration="1531000" />
+      <workItem from="1526895417080" duration="3197000" />
+      <workItem from="1526899314864" duration="1563000" />
+      <workItem from="1526908469647" duration="2866000" />
+      <workItem from="1526928592304" duration="223000" />
+      <workItem from="1526929633845" duration="356000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283171000" />
+    <option name="totallyTimeSpent" value="297661000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="732" extended-state="6" />
@@ -734,10 +753,10 @@
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.36363637" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.26751593" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.26634768" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20424597" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20424597" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49739584" weight="0.25" />
@@ -751,7 +770,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32970452" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32854864" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3141946" />
     </layout>
   </component>
@@ -763,7 +782,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="866" />
+      <option name="time" value="1040" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -771,9 +790,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../../../../Setup/jdk1.8.0_161/src.zip!/java/awt/print/PrinterJob.java" />
-    <entry file="jar://$PROJECT_DIR$/../../../../Setup/jdk1.8.0_161/src.zip!/javax/swing/JTable.java" />
-    <entry file="jar://$USER_HOME$/Librerie Java/mysql-connector-java-5.1.45-bin.jar!/com/mysql/jdbc/Util.class" />
     <entry file="jar:///opt/jdk1.7.0_80/src.zip!/java/lang/Runnable.java" />
     <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/Security.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -920,13 +936,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/StartProgramInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1680">
-          <caret line="120" column="19" selection-start-line="120" selection-start-column="19" selection-end-line="120" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/SaveShow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -950,20 +959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="280" column="67" selection-start-line="280" selection-start-column="67" selection-end-line="280" selection-end-column="67" />
-          <folding>
-            <element signature="e#10808#10961#0" expanded="true" />
-            <element signature="e#10960#10961#0" expanded="true" />
-            <element signature="method#keyPressed#0;class#10922:11222" />
-            <element signature="method#keyReleased#0;class#10922:11222" />
-            <element signature="e#11528#18819#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/Animatore.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
@@ -975,20 +970,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/AnimazioneEstiva.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/SaveArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1027,27 +1008,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/EntryPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="94">
           <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/FilterInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="175" column="22" selection-start-line="175" selection-start-column="22" selection-end-line="175" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1065,10 +1029,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/SaveArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/FilterBambini.data">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/FilterAnimatori.data">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/EntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/FilterInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2055">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Application/AnimazioneEstiva.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/StartProgramInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1635">
+          <caret line="120" column="19" selection-start-line="120" selection-start-column="19" selection-end-line="120" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="215" column="34" selection-start-line="215" selection-start-column="34" selection-end-line="215" selection-end-column="34" />
+          <folding>
+            <element signature="e#11409#11922#0" expanded="true" />
+            <element signature="e#11921#11922#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="293" column="31" selection-start-line="293" selection-start-column="31" selection-end-line="293" selection-end-column="31" />
+        <state relative-caret-position="245">
+          <caret line="1146" column="41" selection-start-line="1146" selection-start-column="41" selection-end-line="1146" selection-end-column="41" />
         </state>
       </provider>
     </entry>
