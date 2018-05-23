@@ -57,20 +57,15 @@ public class StartProgramInterface {
 
         new Thread(new Runnable() {
             @Override
-            public void run() {
-                SwingUtilities.invokeLater(new Runnable() {
-                    @Override
-                    public void run() {
-                        if (connection != null || tryToRead) {
-                            Interface.createAndShowGUI(connection, dbConnection, account,
-                                    StartProgramInterface.this);
+            public void run(){
+                if (connection != null || tryToRead) {
+                    Interface.createAndShowGUI(connection, dbConnection, account,
+                            StartProgramInterface.this);
 
-                            frame.dispose();
-                        }
-                    }
-                });
+                    frame.dispose();
+                }
             }
-        });
+        }).start();
     }
 
     private boolean tryToRead() {

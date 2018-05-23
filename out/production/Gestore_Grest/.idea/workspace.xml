@@ -7,61 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0b7477b-dd04-4417-a850-d5250fa53afa" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Data/FilterAnimatori.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/show.data" beforeDir="false" afterPath="$PROJECT_DIR$/Data/show.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar.zip" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar/Data/AccountData.data" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar/Data/AccountData.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar/Data/Filter.data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar/Gestore_Grest.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Gestore_Grest_jar/Gestore_Grest.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/Data/Filter.data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/Data/show.data" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/Data/show.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/AddBambinoInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface$2$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/FilterInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$15.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$16.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$17.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$18.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$19.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$20.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$21$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$21$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$21.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$22.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$23.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$24.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$4$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$4$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$5$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$5$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$6$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$6$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$7$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$7$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/Interface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/AddBambinoInterface.form" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/AddBambinoInterface.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/AddBambinoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/AddBambinoInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/FilterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/FilterInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/Interface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/FilterInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/FilterInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/StartProgramInterface$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/StartProgramInterface$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/StartProgramInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/it/lucaVezzoli/Interface/StartProgramInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/StartProgramInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Gestore_Grest/src/it/lucaVezzoli/Interface/StartProgramInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/StartProgramInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/StartProgramInterface.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -107,11 +59,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Interface.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Interface.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
+            <state relative-caret-position="16620">
               <caret line="1146" column="41" selection-start-line="1146" selection-start-column="41" selection-end-line="1146" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StartProgramInterface.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/StartProgramInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -235,7 +196,6 @@
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/ConfirmInterface.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Application/EntryPoint.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/StartProgramInterface.form" />
-        <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/StartProgramInterface.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/GestioneAccount.java" />
         <option value="$PROJECT_DIR$/Data/show.data" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Application/SaveShow.java" />
@@ -248,6 +208,7 @@
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.java" />
         <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.form" />
+        <option value="$PROJECT_DIR$/src/it/lucaVezzoli/Interface/StartProgramInterface.java" />
       </list>
     </option>
   </component>
@@ -273,17 +234,41 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Gestore_Grest" type="cbb8eebc:String" user="Gestore_Grest" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Gestore_Grest" type="cbb8eebc:String" user="Gestore_Grest" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Gestore_Grest" type="cbb8eebc:String" user="Gestore_Grest" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="it/lucaVezzoli" type="cbb8eebc:String" user="it/lucaVezzoli" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Gestore_Grest" type="cbb8eebc:String" user="Gestore_Grest" />
+              <item name="src" type="cbb8eebc:String" user="src" />
+              <item name="it/lucaVezzoli" type="cbb8eebc:String" user="it/lucaVezzoli" />
+              <item name="Application" type="cbb8eebc:String" user="Application" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Gestore_Grest" type="b2602c69:ProjectViewProjectNode" />
               <item name="Gestore_Grest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Gestore_Grest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Gestore_Grest" type="462c0819:PsiDirectoryNode" />
-              <item name="Data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Gestore_Grest" type="b2602c69:ProjectViewProjectNode" />
@@ -319,35 +304,6 @@
               <item name="Gestore_Grest" type="58d84e3e:PackageViewProjectNode" />
               <item name="Gestore_Grest" type="616d4139:PackageViewModuleNode" />
               <item name="it.lucaVezzoli" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Gestore_Grest" type="cbb8eebc:String" user="Gestore_Grest" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Gestore_Grest" type="cbb8eebc:String" user="Gestore_Grest" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Gestore_Grest" type="cbb8eebc:String" user="Gestore_Grest" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-              <item name="it/lucaVezzoli" type="cbb8eebc:String" user="it/lucaVezzoli" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Gestore_Grest" type="cbb8eebc:String" user="Gestore_Grest" />
-              <item name="src" type="cbb8eebc:String" user="src" />
-              <item name="it/lucaVezzoli" type="cbb8eebc:String" user="it/lucaVezzoli" />
-              <item name="Application" type="cbb8eebc:String" user="Application" />
             </path>
           </expand>
           <select />
@@ -732,12 +688,14 @@
       <workItem from="1526899314864" duration="1563000" />
       <workItem from="1526908469647" duration="2866000" />
       <workItem from="1526928592304" duration="223000" />
-      <workItem from="1526929633845" duration="356000" />
+      <workItem from="1526929633845" duration="410000" />
+      <workItem from="1527050889089" duration="1083000" />
+      <workItem from="1527062835222" duration="5000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="297661000" />
+    <option name="totallyTimeSpent" value="298798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="732" extended-state="6" />
@@ -756,7 +714,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.26634768" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20424597" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20424597" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" sideWeight="0.49739584" weight="0.25" />
@@ -1066,13 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/StartProgramInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1635">
-          <caret line="120" column="19" selection-start-line="120" selection-start-column="19" selection-end-line="120" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/AddBambinoInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -1089,8 +1040,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/Interface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
+        <state relative-caret-position="16620">
           <caret line="1146" column="41" selection-start-line="1146" selection-start-column="41" selection-end-line="1146" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/it/lucaVezzoli/Interface/StartProgramInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
         </state>
       </provider>
     </entry>
